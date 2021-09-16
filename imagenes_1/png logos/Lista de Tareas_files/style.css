@@ -1,0 +1,70 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #82e0aa;
+}
+
+.contenedor_tareas {
+    height: 200px;
+    background-color: #2ecc71;
+
+    
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+}
+
+.input_tareas {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+    border: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    border-radius: 50px;
+    transition: 0.2s;
+
+    grid-column: -2/-8;
+    grid-row: 2/4;
+}
+.input_tareas:hover {
+    background: #ecf0f1;
+}
+
+.btn_agregar_tareas {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+    background: #fff;
+    font-size: 1.25rem;
+    font-family: 'Lato', sans-serif;
+    border-radius: 50px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    justify-self: center;
+    transition: 0.3s;
+
+
+    grid-column: -2/-8;
+    grid-row: 5/6;
+}
+.btn_agregar_tareas:hover {
+    background:  #d0d3d4 ;
+}
+
+/* Contenedor Vista de Tareas */
+
+.Contenedor_Vista_Tareas {
+
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+}
+
+.error_input {
+    color: #e74c3c;
+    border: 5px solid #e74c3c;
+
+    
+    
+}

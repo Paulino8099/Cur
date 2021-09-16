@@ -1,0 +1,35 @@
+
+.dark_mode {
+    background: #000;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.color_fondo-negro {
+    background: #000;
+}
+
+.formatos_titulos_cajas {
+    box-shadow: 0PX -7PX 10px  rgba(255, 255, 255, 0.300);
+    background: #000;
+    color: #008080;
+}
+.dark_mode_boton {
+    background: #424949;
+    transition: 0.2s;
+}
+
+.dark_mode_img {
+    background-image: url(imagenes_1/Verdes-suaves-opacity50.png);
+}
+
+
+.imagen_navegador_modo-noche:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
+}
+
+.cajon_contactos_modo-noche {
+    box-shadow: 0PX 0PX 10px  rgba(255, 255, 255, 0.800);
+}
