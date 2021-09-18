@@ -1,35 +1,114 @@
-
-.dark_mode {
-    background: #000;
-    color: #fff;
-    transition: 0.5s;
+/* Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche */
+.btn_modoMoche {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid #222222;
+  cursor: pointer;
+  position: relative;
+  fill: #fff;
+  right: 70px;
+  bottom: 25px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  border-radius: 50px;
+  background-color: #008080;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: -1/-2;
+  grid-row: end;
 }
 
-.color_fondo-negro {
-    background: #000;
+.btn_modoMoche .img_sol {
+  fill: #fff;
 }
 
-.formatos_titulos_cajas {
-    box-shadow: 0PX -7PX 10px  rgba(255, 255, 255, 0.300);
-    background: #000;
-    color: #008080;
-}
-.dark_mode_boton {
-    background: #424949;
-    transition: 0.2s;
+.btn_modoMoche .img_luna {
+  fill: #9e9e9e;
 }
 
-.dark_mode_img {
-    background-image: url(imagenes_1/Verdes-suaves-opacity50.png);
+.btn_modoMoche::after {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid #222222;
+  border-radius: 100px;
+  position: absolute;
+  right: unset;
+  left: 0;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: #3498db;
 }
 
-
-.imagen_navegador_modo-noche:hover {
-    cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
+.btn_modoMoche.darkMode {
+  background-color: #505050;
 }
 
-.cajon_contactos_modo-noche {
-    box-shadow: 0PX 0PX 10px  rgba(255, 255, 255, 0.800);
+.btn_modoMoche.darkMode::after {
+  right: 0;
+  left: unset;
 }
+
+.btn_modoMoche .caja_flotante_darkMode {
+  position: absolute;
+  height: 40px;
+  border-radius: 25px;
+  padding: 5px 10px;
+  display: -ms-grid;
+  display: grid;
+  color: #fff;
+  background: #008080;
+  cursor: pointer;
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  opacity: 0;
+  pointer-events: none;
+  margin-left: -20px;
+  margin-top: -25px;
+  -webkit-transition: all 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn_modoMoche .caja_flotante_darkMode.darkMode {
+  color: #222222;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.btn_modoMoche .caja_flotante_darkMode::after {
+  content: "";
+  background: #008080;
+  width: 25px;
+  height: 25px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -7px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 2px;
+}
+
+.btn_modoMoche .txt_caja_flotante_darkMode {
+  z-index: 2;
+  text-align: center;
+}
+
+.btn_modoMoche:hover .caja_flotante_darkMode {
+  opacity: 1;
+  margin-top: -72px;
+  -webkit-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/*# sourceMappingURL=modo_noche.css.map */

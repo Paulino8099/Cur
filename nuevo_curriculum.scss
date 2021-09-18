@@ -7,7 +7,7 @@
 
 //   Variables para css
 
-// Fuentes de textos
+// Fuentes de text_os
 $fuente15px: 15px;
 $fuente20px: 20px;
 $fuente25px: 25px;
@@ -17,39 +17,60 @@ $fuente40px: 40px;
 $fuente45px: 45px;
 $fuente50px: 50px;
 
-// Colores para los Textos
-$textBlanco: #fff;
-$textNegro: #000;
-$textTeal: #008080;
+// Colores para los textos
+$text_blanco: #fff;
+$text_Negro: #000;
+$text_teal: #008080;
+$text_Gris_claro: #cacaca;
+$text_Gris_medioClaro: #9e9e9e;
+$text_Gris_medioOscuro: #505050;
+$text_Gris_fullOscuro: #222222;
 
 // Colores para los Background
-$bgBlanco: #fff;
-$bgNegro: #000;
-$bgTeal: #008080;
+$bg_blanco: #fff;
+$bg_negro: #000;
+$bg_teal: #008080;
+$bg_gris_claro: #cacaca;
+$bg_gris_medioClaro: #9e9e9e;
+$bg_gris_medioOscuro: #505050;
+$bg_gris_fullOscuro: #222222;
 
 //Colores para los Background 75%
-$bgBlancoOpacity75: rgba(255, 255, 255, 0.75);
-$bgNegroOpacity75: rgba(0, 0, 0, 0.75);
-$bgTealOpacity75: #008080bb;
+$bg_blancoOpacity75: rgba(255, 255, 255, 0.75);
+$bg_negroOpacity75: rgba(0, 0, 0, 0.75);
+$bg_tealOpacity75: #008080bb;
 
 //Colores para los Background 25%
-$bgBlancoOpacity25: rgba(255, 255, 255, 0.25);
-$bgNegroOpacity25: rgba(0, 0, 0, 0.25);
-$bgTealOpacity25: #0080804f;
+$bg_blancoOpacity25: rgba(255, 255, 255, 0.25);
+$bg_negroOpacity25: rgba(0, 0, 0, 0.25);
+$bg_tealOpacity25: #0080804f;
 
 // Colores para las sombras
-$sombraBlanca: #fff;
-$sombraNegra: rgba(0, 0, 0, 0.5);
+$sombra_blanca: #fff;
+$sombra_negra: rgba(0, 0, 0, 0.5);
+$sombra_blanca50: rgba(255, 255, 255, 0.5);
+$sombra_negra50: rgba(0, 0, 0, 0.5);
+$sombra_blanca25: rgba(255, 255, 255, 0.250);
+$sombra_negra25: rgba(0, 0, 0, 0.250);
+
 
 // Colores para los Bordes
-$bordeBlanco: #fff;
-$bordeNegro: #000;
-$bordeTeal: #008080;
+$borde_blanco: #fff;
+$borde_negro: #000;
+$borde_teal: #008080;
+$borde_gris_claro: #cacaca;
+$borde_gris_medioClaro: #9e9e9e;
+$borde_gris_medioOscuro: #505050;
+$borde_gris_fullOscuro: #222222;
 
 //Colores para los logos
-$logoBLanco: #fff;
-$logoNegro: #000;
-$logoTeal: #008080;
+$logo_bLanco: #fff;
+$logo_negro: #000;
+$logo_teal: #008080;
+$logo_gris_claro: #cacaca;
+$logo_gris_medioClaro: #9e9e9e;
+$logo_gris_medioOscuro: #505050;
+$logo_gris_fullOscuro: #222222;
 
 body {
   position: relative;
@@ -57,25 +78,1046 @@ body {
   transition: all 0.5s;
   grid-template-columns: repeat(10, auto);
   grid-template-rows: auto;
+  &.darkMode {
+    background-color: $bg_gris_fullOscuro;
+    color: $text_blanco;
+  }
+  /* CAJON DE NAVEGACION (HEADER)   CAJON DE NAVEGACION (HEADER)   CAJON DE NAVEGACION (HEADER) */
+  .navegador {
+    position: relative;
+    align-items: center;
+    background-image: url(imagenes_1/Verdes-suaves-600x292.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    display: grid;
+    grid-column: 1/11;
+    grid-row: 1/2;
+    grid-template-columns: 30px repeat(8, auto) 30px;
+    grid-template-rows: 20px repeat(8, auto);
+    &.darkMode {
+      background-image: url(imagenes_1/Verdes-suaves-opacity50.png);
+    }
+    // TITULO DEL NAVEGADOR
+    .titulo_navegador {
+      align-self: center;
+      justify-self: start;
+      text-align: center;
+      transition: 0.5s;
+      padding: 5px;
+      color: $text_teal;
+      text-decoration: none;
+      border: 2px solid $borde_teal;
+      border-radius: 20px;
+      font-size: 2rem;
+  
+      grid-column: 2/4;
+      grid-row: 2/3;
+      &.darkMode {
+        color: $text_Gris_claro;
+        &.darkmode:hover {
+          color: $text_blanco;
+        }
+      }
+    }
+    .titulo_navegador:hover {
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 2px 2px 10px $sombra_negra;
+      background: $bg_teal;
+      color: $text_blanco;
+      border: 2px solid $borde_blanco;
+    }
+    //CAJA PARA TITULO DEL NAVEGADOR PARA DISPOSITIVOS MOVILES
+    .caja_titulo1_navegador {
+      display: none;
+    }
+    // CAJON DEL MENU DE NAVEGACION PARA ESCRITORIO
+    .menu_navegador {
+      display: none;
+      justify-self: end;
+      color: $text_teal;
+      display: flex;
+      grid-column: -2/-7;
+      grid-row: 2/3;
+      margin-right: -5px;
+      .submenu {
+        position: relative;
+        display: grid;
+        height: 1.56rem;
+        text-align: center;
+        transition: 0.5s;
+        font-size: 1.25rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: $text_teal;
+        padding: 5px;
+        border-radius: 20px;
+        border: 2px solid $borde_teal;
+        margin-right: 5px;
+        text-decoration: none;
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+      .submenu:hover {
+        transition: 0.2s;
+        box-shadow: 2px 2px 10px $sombra_negra;
+        background: $bg_teal;
+        color: $text_blanco;
+        border: 2px solid $borde_blanco;
+      }
+      //MODO NOCHE DEL SUBMENU DEL NAVEGADOR
+      .subMenu1 {
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+      .subMenu2 {
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+      .subMenu2 {
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+      .subMenu4 {
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+    }
+    .nombre {
+      justify-self: center;
+      text-align: center;
+      color: $text_teal;
+      text-decoration: underline;
+      font-size: 3.125rem;
+      grid-column: -1/-11;
+      grid-row: 7/8;
+      &.darkMode {
+        color: $bg_gris_claro;
+      }
+    }
+  
+    .txt_imagen {
+      align-self: start; 
+      justify-self: center;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      text-align: center;
+      color: lightslategrey;
+      font-size: 1.25rem;
+      grid-column: -1/-11;
+      grid-row: 8/9;
+      &.darkMode {
+        color: $bg_gris_claro;
+      }
+    }
+    // IMAGEN DEL NAVEGADOR PRINCIPAL 
+    .imagen_navegador {
+      justify-self: center;
+      border-radius: 50%;
+      grid-column: -1/-11;
+      grid-row: 3/7;
+    }
+    // VENTANA FLOTATENTE PARA IMAGEN DEL NAVEGADOR
+    .contenedor_img_nav_float {
+      justify-self: center;
+      position: relative;
+      z-index: 2;
+      bottom: 0;
+      top: 0;
+      width: 25%;
+      border-radius: 15px;
+      box-shadow: 0 0 10px $sombra_negra;
+      transition: all 0.5s;
+      background-color: #000;
+  
+      display: none;
+      grid-column: 1/9;
+      grid-row: 1/9;
+      grid-template-columns: repeat(8, auto);
+      grid-template-rows: repeat(8, auto);
+      &.active {
+        display: grid;
+      }
+      .img_nav_float {
+        justify-self: center;
+        transition: all 0.5s ease;
+        border-radius: 20px;
+        box-shadow: 0 0 10px $sombra_negra;
+  
+        grid-column: 1/9;
+        grid-row: 1/9;
+      }
+      .btn_img_nav_float {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        border-radius: 50%;
+        background-color: #ee425f;
+        color: $text_blanco;
+        justify-self: end;
+        z-index: 3;
+        cursor: pointer;
+  
+        grid-column: -9/-1;
+        grid-row: 1/2;
+      }
+      .btn_img_nav_float:hover {
+        background-color: #ee425f8a;
+      }
+      .caja_informacionPersonal {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        padding: 20px;
+        position: absolute;
+        background: #00808096;
+        align-self: center;
+        justify-self: center;
+        border-radius: 20px;
+        color: $text_blanco;
+        line-height: 50px;
+        width: 92%;
+        height: 92%;
+  
+        grid-column: 1/9;
+        grid-row: 1/9;
+        &.darkMode {
+          color: $bg_gris_claro;
+        }
+      }
+    }
+  }
+  .imagen_navegador:hover {
+    opacity: 90%;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0px 0px 10px $sombra_negra;
+  }
+  // IMAGEN PARA EL NAVEGADOR PARA DISPOSITIVOS MOVILES
+  .contenedor_img_menu_nav {
+    display: none;
+  }
+  
+  /* CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    */
+  .titulo_caja_Estudios {
+    grid-column: 1/11;
+    grid-row: 2/3;
+    &.darkMode {
+      background-color: $bg_gris_fullOscuro;
+      color: $text_Gris_claro;
+      box-shadow: 0 -10px 10px $sombra_blanca25;
+    }
+  }
+  .caja_estudios {
+    box-shadow: 2px 2px 10px $sombra_negra;
+    padding: 10px;
+    border-radius: 20px;
+    background: $bg_blanco;
+    margin: 0px 50px 10px 50px;
+    gap: 10px;
+    display: grid;
+    grid-column: 1/11;
+    grid-row: 3/4;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, auto)
+    ); //auto-fit permite rellenar todo el contenedor con los elementos que hay
+    grid-auto-rows: minmax(200px, auto);
+    &.darkMode {
+      color: $text_Gris_claro;
+      background-color: $bg_gris_fullOscuro;
+      box-shadow: 0 0 10px $sombra_blanca50;
+    }
+    /* CAJA DE INFOTEP */
+    .caja_infotep {
+      position: relative;
+  
+      display: grid;
+      grid-template-columns: repeat(10, auto);
+      grid-template-rows: repeat(10, auto);
+  
+      .titulo_infotep {
+        background: $bg_teal;
+        border-top: 3px solid $borde_negro;
+        border-bottom: 2px solid $borde_negro;
+        border-left: 2px solid $borde_negro;
+        border-right: 2px solid $borde_negro;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        justify-self: center;
+        padding: 5px 20px;
+  
+        display: flex;
+        grid-column: 1/11;
+        grid-row: 1/2;
+        &.darkMode {
+          border-top: 3px solid $borde_gris_claro;
+          border-bottom: 2px solid $borde_gris_claro;
+          border-left: 2px solid $borde_gris_claro;
+          border-right: 2px solid $borde_gris_claro;
+        }
+        .txt_titulo_infotep {
+          font-size: 1.5rem;
+          color: $text_blanco;
+          align-self: center;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          &.darkMode {
+            color: $text_blanco;
+          }
+        }
+        .infotep_logo {
+          margin-left: 5px;
+        }
+      }
+  
+      .caja_contenido_infotep {
+        border: 3px solid $borde_negro;
+        border-radius: 20px;
+        justify-self: center;
+  
+        display: grid;
+        grid-column: 1/11;
+        grid-row: 2/3;
+        grid-template-columns: repeat(10, auto);
+        grid-template-rows: repeat(10, auto);
+        &.darkMode {
+          border: 3px solid $borde_gris_claro;
+        }
+        /* Primera caja (Infotep) */
+        .caja_dpw {
+          margin-bottom: 15px;
+  
+          grid-column: 1/11;
+          grid-row: 2/3;
+          .dpw_titulo {
+            &.darkMode {
+              color: $text_Gris_claro;
+            }
+          }
+          .linea_dpw {
+            align-self: flex-start;
+  
+            grid-column: 1/11;
+            grid-row: 2/3;
+          }
+          .logo_dpw {
+            margin: 5px auto;
+          }
+        }
+        /* segunda caja */
+        .microsoft_oficce {
+          margin-bottom: 10px;
+  
+          grid-column: 1/11;
+          grid-row: 3/4;
+          .mpoi_titulo {
+            &.darkMode {
+              color: $text_Gris_claro;
+            }
+          }
+          .linea_mpoi {
+            align-self: flex-start;
+  
+            grid-column: 1/11;
+            grid-row: 3/4;
+          }
+          /* Logos */
+          .logos_mpoi {
+            display: flex;
+          }
+          .logo_world {
+            margin: 5px auto;
+            width: 60px;
+          }
+          .logo_excel {
+            margin: 5px auto;
+          }
+          .logo_pointer {
+            margin: 5px auto;
+          }
+        }
+  
+        /* Tercera Caja */
+        .contenedor {
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
+  
+          grid-column: 1/11;
+          grid-row: 4/5;
+          .window_nt {
+            width: 150px;
+            .w-nt_titulo {
+              &.darkMode {
+                color: $text_Gris_claro;
+              }
+            }
+            .w-nt_logo {
+              margin: 5px auto;
+            }
+          }
+          .auxiliar_ventas {
+            width: 150px;
+            .titulo_auxiliar_ventas {
+              &.darkMode {
+                color: $text_Gris_claro;
+              }
+            }
+            .img_auxiliarVentas {
+              fill: $logo_negro;
+              justify-self: center;
+              &.darkMode {
+                fill: $logo_gris_claro;
+              }
+            }
+          }
+        }
+        .infotep_btn {
+          justify-self: center;
+          cursor: pointer;
+  
+          grid-column: 1/11;
+          grid-row: 10/11;
+        }
+      }
+    }
+    /* VENTANA FLOTANTE DE INFOTEP */
+    .ventanaFlotante_infotep {
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      background: $bg_blanco;
+      justify-self: center;
+      box-shadow: 0 0 10px #000;
+      border-radius: 5px;
+      margin-left: -1000px;
+      z-index: 2;
+      visibility: hidden;
+  
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(auto);
+      &.active {
+        margin-left: 0;
+        visibility: visible;
+      }
+  
+      .titulo_ventanaFlotante_infotep {
+        color: $text_blanco;
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        font-size: 1.5rem;
+        text-align: center;
+        justify-self: center;
+        background: #008080;
+  
+        display: grid;
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+      .contenedor_ventanaFlotante_infotep {
+        overflow: auto;
+        height: 400px;
+        border-radius: 25px;
+        color: $text_teal;
+        padding: 10px 20px;
+        justify-self: center;
+        padding: 25px;
+        gap: 10px;
+  
+        display: grid;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        grid-auto-rows: minmax(200px, auto);
+  
+        .caja_diseñadorPaginasWeb {
+          background: #e5e7e9;
+          padding: 10px;
+          display: grid;
+          border-radius: 10px;
+        }
+        .txt_diseñadorPaginasWeb {
+          text-align: center;
+          text-shadow: 0 0 2px #000;
+        }
+        .caja_powerPoint {
+          background: #e5e7e9;
+          padding: 10px;
+          display: grid;
+          border-radius: 10px;
+          justify-items: center;
+        }
+        .txt_powerPoint {
+          text-align: center;
+          text-shadow: 0 0 2px #000;
+        }
+        .caja_ManejadorProgramasOficinaInternet {
+          background: #e5e7e9;
+          padding: 10px;
+          display: grid;
+          border-radius: 10px;
+          justify-items: center;
+        }
+        .txt_ManejadorProgramasOficinaInternet {
+          text-align: center;
+          text-shadow: 0 0 2px #000;
+        }
+        .caja_window_nt {
+          background: #e5e7e9;
+          padding: 10px;
+          display: grid;
+          border-radius: 10px;
+          justify-items: center;
+        }
+        .txt_window_nt {
+          text-align: center;
+          text-shadow: 0 0 2px #000;
+        }
+      }
+      /* Botón para Salir de Ventana Flotante del Infotep */
+      .btn_salir_ventanaFlotante_infotep {
+        position: absolute;
+        justify-self: end;
+        align-self: flex-end;
+        margin: 0 25px 25px 0;
+        padding: 20px 10px;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: #17202a50;
+        background: #00808020;
+        text-transform: capitalize;
+        cursor: pointer;
+        outline: none;
+  
+        grid-column: 1/3;
+      }
+  
+      .btn_salir_ventanaFlotante_infotep:hover {
+        color: $text_blanco;
+        background: #008080;
+      }
+    }
+    // CAJA DE ESTUDIOS MEDIOS
+    .caja_estudiosMedios {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      .tituloPrincipal_estudiosMedios {
+        background: $bg_teal;
+        border-top: 3px solid $borde_negro;
+        border-bottom: 2px solid $borde_negro;
+        border-left: 2px solid $borde_negro;
+        border-right: 2px solid $borde_negro;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        justify-self: center;
+        padding: 5px 20px;
+  
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        &.darkMode {
+          border-top: 3px solid $borde_gris_claro;
+          border-bottom: 2px solid $borde_gris_claro;
+          border-left: 2px solid $borde_gris_claro;
+          border-right: 2px solid $borde_gris_claro;
+        }
+        .txt_tituloPrincipal_estudiosMedios {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          font-size: 1.5rem;
+          color: $text_blanco;
+        }
+        .logo_tituloPrincipal_estudiosMedios {
+          margin-left: 5px;
+          fill: $logo_bLanco;
+          &.darkMode {
+            fill: $logo_gris_claro;
+          }
+        }
+      }
+      .contenido_estudiosMedios {
+        border: 3px solid $borde_negro;
+        border-radius: 20px;
+        padding: 0 5px;
+        background-color: #3581b1;
+        justify-self: center;
+        border: 3px solid $borde_gris_claro;
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        grid-template-columns: repeat(8, auto);
+        grid-template-rows: repeat(8, auto);
+  
+        .titulo_conclusionEstudiosMedios {
+          color: $text_blanco;
+          text-shadow: 0 0 2px $sombra_negra;
+          padding: 10px 0;
+          font-size: 1.25rem;
+          justify-self: center;
+  
+          grid-column: 1/9;
+          grid-row: 1/2;
+        }
+        .img_escuela {
+          border-radius: 5px;
+  
+          grid-column: 1/9;
+          grid-row: 2/3;
+        }
+        .btn_estudiosMedios {
+          justify-self: center;
+          margin: 10px 0 0 0;
+  
+          grid-column: 1/9;
+          grid-row: 8/9;
+        }
+      }
+    }
+    // VENTANA FLOTANTE DE ESTUDIOS MEDIOS
+    .caja_ventanaFlotante_estudiosMedios {
+      justify-self: center;
+      position: absolute;
+      background-color: $bg_blanco;
+      overflow: hidden;
+      z-index: 2;
+      border-radius: 20px;
+  
+      box-shadow: $sombra_negra;
+      border: 2px solid $borde_negro;
+  
+      display: none;
+      grid-column: 1/11;
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(2, auto);
+      &.active {
+        display: grid;
+      }
+  
+      .titulo_ventanaFlotante_estudiosMedios {
+        background-color: $bg_teal;
+        font-size: 1.5rem;
+        width: 100%;
+        color: $text_blanco;
+        text-align: center;
+  
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+  
+      .contenedor_ventanaFlotante_estudiosMedios {
+        gap: 10px;
+        padding: 10px 0;
+        justify-content: space-between;
+  
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        grid-auto-rows: minmax(200px, auto);
+  
+        .caja_certificadoBachiller {
+          border-radius: 15px;
+          padding: 10px;
+          display: grid;
+          max-width: 250px;
+          background-color: #e5e7e9;
+  
+          .titulo_certificadoBachiller {
+            text-align: center;
+            color: $text_teal;
+            text-shadow: $sombra_negra;
+          }
+        }
+      }
+      .btnSalir_ventanaFlotante_estudiosMedios {
+        cursor: pointer;
+        position: absolute;
+        justify-self: end;
+        align-self: end;
+        border: none;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-color: $bg_tealOpacity25;
+  
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      .btnSalir_ventanaFlotante_estudiosMedios:hover {
+        background-color: #008080;
+      }
+    }
+  }
+  /* CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   */
+  .titulo_contactos {
+    grid-column: 1/11;
+    grid-row: 4/5;
+    &.darkMode {
+      background-color: $bg_gris_fullOscuro;
+      box-shadow: 0 -10px 10px $sombra_blanca25;
+      color: $text_Gris_claro;
+    }
+  }
+  .caja_contactos {
+    box-shadow: 0px 0px 10px $sombra_negra;
+    background: $bg_blanco;
+    padding: 20px;
+    margin: 0 50px 20px 50px;
+    color: $text_Negro;
+    border-radius: 20px;
+    grid-column: 1/11;
+    grid-row: 5/6;
+  
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px 1fr);
+    grid-template-rows: minmax(300px, auto);
+    justify-content: space-evenly;
+    &.darkMode {
+      background-color: $bg_gris_fullOscuro;
+      box-shadow: 0 0 10px $sombra_blanca50;
+    }
+    /* CAJA DE INFORMACION ADICIONAL */
+    .caja_informacion {
+      margin-right: 20px;
+      display: grid;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      grid-template-columns: repeat(10, auto);
+      grid-template-rows: minmax(1fr, auto);
+      .titulo_columna1 {
+        grid-column: 1/10;
+        grid-row: 1/2;
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+      .parrafo_columna1 {
+        grid-column: 1/10;
+        grid-row: 2/10;
+        font-family: "Style Script";
+        font-size: 1.5625rem;
+        line-height: 30px;
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+    }
+    /* CAJA DE REDES SOCIALES */
+    .caja_redes_sociales {
+      margin-right: 20px;
+      display: grid;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      grid-template-columns: repeat(20, auto);
+      grid-template-rows: repeat(20, auto);
+      .titulo_columna2 {
+        grid-column: -1/-20;
+        grid-row: 1/2;
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+      /* Facebook */
+      .caja_facebook {
+        width: 150px;
+        justify-self: start;
+        align-items: center;
+        align-self: center;
+        display: flex;
+        grid-column: -1/-20;
+        grid-row: 2/4;
+        .logo_facebook {
+          align-items: center;
+          margin-right: 10px;
+        }
+        .txt_facebook {
+          &.darkMode {
+            color: $text_Gris_claro;
+          }
+        }
+      }
+      /* Twitter */
+      .caja_twitter {
+        width: 150px;
+        justify-self: start;
+        align-self: center;
+        align-items: center;
+        display: flex;
+        grid-column: -1/-20;
+        grid-row: 4/6;
+        .logo_twitter {
+          align-items: center;
+          margin-right: 10px;
+        }
+        .txt_twitter {
+          &.darkMode {
+            color: $text_Gris_claro;
+          }
+        }
+      }
+      /* Instagram */
+      .caja_instagram {
+        justify-self: start;
+        align-items: center;
+        align-self: center;
+        display: flex;
+        grid-column: -1/-20;
+        grid-row: 6/8;
+        .logo_instagram {
+          align-items: center;
+          margin-right: 10px;
+        }
+        .txt_instagram {
+          &.darkMode {
+            color: $text_Gris_claro;
+          }
+        }
+      }
+      /* Whatsapp */
+      .caja_whatsapp {
+        grid-column: -1/-20;
+        grid-row: 8/10;
+        .logo_whatsapp {
+          align-items: center;
+          margin-right: 10px;
+        }
+        .txt_whatsapp {
+          &.darkMode {
+            color: $text_Gris_claro;
+          }
+        }
+      }
+      /* Cajón de Códigos QR */
+      .caja_codigo_facebook {
+        display: grid;
+        padding: 5px;
+        justify-items: center;
+        grid-column: 1/5;
+        grid-row: 15/17;
+        .txt_codigo_facebook {
+          color: #0d8df2;
+          text-decoration: underline 1px solid #1a5276;
+          &.darkMode {
+            color: $text_Gris_claro;
+          }
+        }
+      }
+      .caja_codigo_twitter {
+        display: grid;
+        padding: 5px;
+        justify-items: center;
+        grid-column: 5/10;
+        grid-row: 15/17;
+        .txt_codigo_twitter {
+          color: #1aa2f2;
+          text-decoration: underline 1px solid #3498db;
+          &.darkMode {
+            color: $text_Gris_claro;
+          }
+        }
+      }
+      .caja_codigo_instagram {
+        display: grid;
+        padding: 5px;
+        justify-items: center;
+        grid-column: 10/15;
+        grid-row: 15/17;
+        .txt_codigo_instagram {
+          color: #ee425f;
+          text-decoration: underline 1px solid #ec7063;
+        }
+      }
+      .caja_codigo_ws {
+        display: grid;
+        padding: 5px;
+        justify-items: center;
+        grid-column: 15/20;
+        grid-row: 15/17;
+        .txt_codigo_ws {
+          color: #31cf5d;
+          text-decoration: underline 1px solid #58d68d;
+        }
+      }
+    }
+    /* CAJA INFORMACION DE CONTACTOS */
+    .caja_info_contactos {
+      display: grid;
+      grid-column: 3/4;
+      grid-row: 1/2;
+      grid-template-columns: repeat(10, auto);
+      grid-template-rows: repeat(10, auto);
+      .titulo_columna3 {
+        grid-column: 1/11;
+        grid-row: 1/2;
+        &.darkMode {
+          color: $text_Gris_claro
+        }
+      }
+      /* Dirección */
+      .caja_direccion {
+        display: grid;
+        box-shadow: 0px 5px 1px $sombra_negra;
+        border-radius: 15px;
+        align-items: center;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: minmax(1fr, auto);
+        grid-column: 1/11;
+        grid-row: 2/4;
+        margin-bottom: 10px;
+        .logo_direccion {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          &.darkMode {
+            fill: $logo_gris_claro;
+          }
+        }
+        .txt_direccion {
+          margin-left: 10px;
+          grid-column: 2/10;
+          grid-row: 1/2;
+          &.darkMode {
+            color: $text_Gris_claro
+          }
+        }
+      }
+      /* Teléfono */
+      .caja_telefono {
+        box-shadow: 0px 5px 1px $sombra_negra;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-column: 1/11;
+        grid-row: 4/6;
+        align-items: center;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: minmax(1fr, auto);
+        .logo_telefono {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          &.darkMode {
+            fill: $logo_gris_claro;
+          }
+        }
+        .txt_telefono {
+          grid-column: 2/10;
+          grid-row: 1/2;
+          margin-left: 10px;
+          &.darkMode {
+            color: $text_Gris_claro
+          }
+        }
+      }
+      /* Email */
+      .caja_gmail {
+        box-shadow: 0px 5px 1px $sombra_negra;
+        border-radius: 15px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: minmax(1fr, auto);
+        grid-column: 1/11;
+        grid-row: 6/11;
+        .logo_gmail {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          &.darkMode {
+            fill: $logo_gris_claro;
+          }
+        }
+        .txt_gmail {
+          margin-left: 10px;
+          grid-column: 2/10;
+          grid-row: 1/2;
+          &.darkMode {
+            color: $text_Gris_claro
+          }
+        }
+      }
+    }
+    /* Copy Right */
+    .copyright {
+      grid-column: 1/2;
+      display: flex;
+      justify-self: start;
+      align-items: center;
+      font-size: 1.25rem;
+      .logo_copyright {
+        margin-right: 5px;
+        &.darkMode {
+          fill: $logo_gris_claro;
+        }
+      }
+      .txt_copyright {
+        text-decoration: underline 1px solid #000;
+        &.darkMode {
+          color: $text_Gris_claro
+        }
+      }
+    }
+  }
+  
 }
 
 /* Todos los Formatos   Todos los Formatos   Todos los Formatos   Todos los Formatos   Todos los Formatos   Todos los Formatos   */
 
-/* Formatos de fondo Background */
+/* Formatos de opacidad */
+.opacidad100 {
+  opacity: 100%;
+}
+.opacidad75 {
+  opacity: 75%;
+}
+.opacidad50 {
+  opacity: 50%;
+}
+.opacidad25 {
+  opacity: 25%;
+}
 
-.formato__lineas {
+.formato_lineas {
   margin: 0 auto 0px auto;
   width: 75%;
 }
-.formato__hover:hover {
+.formato_hover:hover {
   color: teal;
   cursor: pointer;
 }
-.formato__cajas_infotep {
+.formato_cajas_infotep {
   margin: 5px auto;
   text-decoration: none;
   text-align: center;
   width: 300px;
+}
+
+// FORMATO PARA ACTIVAR/DESACTIVAR
+.display_block_active {
+  display: block;
+}
+.visibilityVisivible_active {
+  visibility: visible;
+}
+.opacity1_active {
+  opacity: 1;
+}
+.marginLeft0_active {
+  margin-left: 0;
+}
+.marginRight0_active {
+  margin-right: 0;
+}
+.marginTop0_active {
+  margin-top: 0;
+}
+.marginBottom0_active {
+  margin-bottom: 0;
 }
 
 /* Fomartos de los Logos */
@@ -159,47 +1201,52 @@ body {
 }
 
 /* Formatos de las letras */
-.formato__caja__titulos {
-  background: $bgNegro;
+.formato_caja_titulos {
+  background: $bg_negro;
   align-items: center;
-  border-top: 3px solid $bordeNegro;
-  border-bottom: 2px solid $bordeNegro;
-  border-left: 2px solid $bordeNegro;
-  border-right: 2px solid $bordeNegro;
+  border-top: 3px solid $borde_negro;
+  border-bottom: 2px solid $borde_negro;
+  border-left: 2px solid $borde_negro;
+  border-right: 2px solid $borde_negro;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   width: 200px;
   height: 30px;
   margin: 0 auto;
 }
-.formato__titulo_cajas_mayores {
-  background-color: $bgBlanco;
+.formato_titulo_cajas_mayores {
+  background-color: $bg_blanco;
   font-size: 2rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   justify-self: center;
   padding: 5px 15px;
   margin-top: 20px;
-  color: $textTeal;
-  box-shadow: 0px -10px 10px $sombraNegra;
+  color: $text_teal;
+  box-shadow: 0px -10px 10px $sombra_negra;
   z-index: 1;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  &.darkMode {
+    color: $text_Gris_claro;
+    background-color: $bg_gris_fullOscuro;
+    box-shadow: 0 -10 10px $sombra_blanca;
+  }
 }
 .formatos_titulos_35px {
   font-size: 2.1875rem;
 }
-.formato__letras_titulos_pequeños {
+.formato_letras_titulos_pequeños {
   font-size: 20px;
-  color: $textNegro;
+  color: $text_Negro;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .formatos_titulos_20px {
   font-size: 1.25rem;
   font-family: cursive;
-  color: $textNegro;
+  color: $text_Negro;
   text-decoration: none;
 }
-.formato_textos_20px {
+.formato_text_os_20px {
   font-size: 1.25rem;
   font-family: monospace;
 }
@@ -214,1031 +1261,36 @@ body {
 .formato_btn_hover_teal:hover {
   cursor: pointer;
   transition: 0.3s;
-  color: $textBlanco;
-  background: $bgTeal;
+  color: $text_blanco;
+  background: $bg_teal;
   border-radius: 50px;
-  box-shadow: 2px 2px 10px $sombraNegra;
+  box-shadow: 2px 2px 10px $sombra_negra;
 }
 
-.Formato__btn {
+.Formato_btn {
+  border-top: 3px solid $borde_negro;
+  border-left: 2px solid $borde_negro;
+  border-right: 2px solid $borde_negro;
+  border-bottom: none;
   text-decoration: none;
-  border: none;
   cursor: pointer;
   padding: 5px 10px;
-  background: $bgTeal;
+  background: $bg_teal;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.5rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  color: $textBlanco;
+  color: $text_blanco;
+  &.darkMode {
+    border-top: 3px solid $borde_gris_claro;
+    border-left: 2px solid $borde_gris_claro;
+    border-right: 2px solid $borde_gris_claro;
+  }
 }
-.Formato__btn:hover {
-  background: $bgTealOpacity75;
-  color: $textBlanco;
+.Formato_btn:hover {
+  background: $bg_tealOpacity75;
+  color: $text_blanco;
   transition: 0.2s;
-  box-shadow: 0px -3px 10px $sombraNegra;
+  box-shadow: 0px -3px 10px $sombra_negra;
 }
 /* Fin de Formatos */
-
-/* caja de Navegador   caja de Navegador   caja de Navegador   caja de Navegador   caja de Navegador   caja de Navegador   caja de Navegador   */
-.navegador {
-  position: relative;
-  align-items: center;
-  background-image: url(imagenes_1/Verdes-suaves-600x292.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: grid;
-  grid-column: 1/11;
-  grid-row: 1/2;
-  grid-template-columns: 30px repeat(8, auto) 30px;
-  grid-template-rows: 20px repeat(8, auto);
-  // TITULO DEL NAVEGADOR
-  .titulo_navegador {
-    align-self: center;
-    justify-self: start;
-    text-align: center;
-    transition: 0.5s;
-    padding: 5px;
-    color: $textTeal;
-    text-decoration: none;
-    border: 2px solid $bordeTeal;
-    border-radius: 20px;
-    font-size: 2rem;
-
-    grid-column: 2/4;
-    grid-row: 2/3;
-  }
-  .titulo_navegador:hover {
-    cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 2px 2px 10px $sombraNegra;
-    background: $bgTeal;
-    color: $textBlanco;
-    border: 2px solid $bordeBlanco;
-  }
-  //CAJA PARA TITULO DEL NAVEGADOR PARA DISPOSITIVOS MOVILES
-  .caja_titulo1_navegador {
-    display: none;
-  }
-  // CAJON DEL MENU DE NAVEGACION PARA ESCRITORIO
-  .menu_navegador {
-    display: none;
-    justify-self: end;
-    color: $textTeal;
-    display: flex;
-    grid-column: -2/-7;
-    grid-row: 2/3;
-    margin-right: -5px;
-    .submenu {
-      position: relative;
-      display: grid;
-      height: 1.56rem;
-      text-align: center;
-      transition: 0.5s;
-      font-size: 1.25rem;
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      color: $textTeal;
-      padding: 5px;
-      border-radius: 20px;
-      border: 2px solid $bordeTeal;
-      margin-right: 5px;
-      text-decoration: none;
-    }
-    .submenu:hover {
-      transition: 0.2s;
-      box-shadow: 2px 2px 10px $sombraNegra;
-      background: cadetblue;
-      color: $textBlanco;
-      border: 2px solid $bordeBlanco;
-    }
-  }
-  // IMAGEN DEL NAVEGADOR PRINCIPAL PARA DISPOSITIVOS MOVILES
-  .imagen_navegador {
-    justify-self: center;
-    border-radius: 50%;
-    grid-column: -1/-11;
-    grid-row: 3/7;
-  }
-  // CAJA CONTENEDORA DE ELEMENTOS DEL MENU DE NVEGACION PARA DISPOSITIVOS MOVILES
-  .contenedor_img_nav_float {
-    justify-self: center;
-    align-self: center;
-    position: absolute;
-    z-index: 2;
-    height: 100%;
-    border-radius: 15px;
-
-    display: none;
-    grid-column: 1/11;
-    grid-row: 1/10;
-    grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(8, auto);
-  }
-  // Caja contenedora de Ventana FLotante para Imágen del navegador
-  .contenedor_img_nav_float_active {
-    box-shadow: 0 0 10 $sombraNegra;
-    transition: all 0.5s ease-in-out;
-    display: grid;
-
-    .img_nav_float {
-      transition: all 0.5s ease;
-      border-radius: 20px;
-      box-shadow: 0 0 10px $sombraNegra;
-      height: 100%;
-
-      grid-column: -9/-1;
-      grid-row: 1/9;
-    }
-    .btn_img_nav_float {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      font-size: 1rem;
-      border-radius: 50%;
-      background-color: #ee425f;
-      color: $textBlanco;
-      justify-self: end;
-      z-index: 3;
-      cursor: pointer;
-
-      grid-column: -9/-1;
-      grid-row: 1/2;
-    }
-    .btn_img_nav_float:hover {
-      background-color: #ee425f8a;
-    }
-    .caja_informacionPersonal {
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      padding: 20px;
-      position: absolute;
-      background: #00808096;
-      align-self: center;
-      justify-self: center;
-      width: 70%;
-      height: 70%;
-      border-radius: 20px;
-      color: $textBlanco;
-      line-height: 50px;
-
-      grid-column: 1/9;
-      grid-row: 1/9;
-    }
-  }
-
-  .nombre {
-    justify-self: center;
-    text-align: center;
-    color: $textTeal;
-    text-decoration: underline;
-    font-size: 3.125rem;
-    grid-column: -1/-11;
-    grid-row: 7/8;
-  }
-
-  .txt__imagen {
-    align-self: start; /*Justificarse*/
-    justify-self: center;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    text-align: center;
-    color: lightslategrey;
-    font-size: 1.25rem;
-    grid-column: -1/-11;
-    grid-row: 8/9;
-  }
-}
-.imagen_navegador:hover {
-  opacity: 90%;
-  cursor: pointer;
-  transition: 0.2s;
-  box-shadow: 0px 0px 10px $sombraNegra;
-}
-
-/* Caja de Estudios    Caja de Estudios    Caja de Estudios    Caja de Estudios    Caja de Estudios    */
-.titulo_caja_Estudios {
-  grid-column: 1/11;
-  grid-row: 2/3;
-}
-.caja_estudios {
-  box-shadow: 2px 2px 10px $sombraNegra;
-  padding: 10px 20px;
-  border-radius: 20px;
-  background: $bgBlanco;
-  margin: 0px 50px 10px 50px;
-  gap: 10px;
-  display: grid;
-  grid-column: 1/11;
-  grid-row: 3/4;
-  grid-template-columns: repeat(auto-fill,minmax(300px, auto)); //auto-fit permite rellenar todo el contenedor con los elementos que hay
-  grid-auto-rows: minmax(200px, auto);
-}
-
-/* Caja de Infotep */
-.caja_infotep {
-  width: 100%;
-  position: relative;
-
-  display: grid;
-  grid-template-columns: repeat(10, auto);
-  grid-template-rows: repeat(10, auto);
-
-  .titulo_infotep {
-    background: $bgTeal;
-    border-top: 3px solid $bordeNegro;
-    border-bottom: 2px solid $bordeNegro;
-    border-left: 2px solid $bordeNegro;
-    border-right: 2px solid $bordeNegro;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    justify-self: center;
-    padding: 5px 20px;
-
-    display: flex;
-    grid-column: 1/11;
-    grid-row: 1/2;
-    .txt__infotep {
-      font-size: 1.5rem;
-      color: $textBlanco;
-      align-self: center;
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    }
-    .infotep_logo {
-      margin-left: 5px;
-    }
-  }
-
-  .caja_contenido_infotep {
-    border: 3px solid $bordeNegro;
-    border-radius: 20px;
-    justify-self: center;
-
-    display: grid;
-    grid-column: 1/11;
-    grid-row: 2/3;
-    grid-template-columns: repeat(10, auto);
-    grid-template-rows: repeat(10, auto);
-    /* Primera caja (Infotep) */
-    .caja__dpw {
-      margin-bottom: 15px;
-
-      grid-column: 1/11;
-      grid-row: 2/3;
-    }
-    .linea_dpw {
-      align-self: flex-start;
-
-      grid-column: 1/11;
-      grid-row: 2/3;
-    }
-    .logo_dpw {
-      margin: 5px auto;
-    }
-    /* segunda caja */
-    .microsoft__oficce {
-      margin-bottom: 10px;
-
-      grid-column: 1/11;
-      grid-row: 3/4;
-    }
-    .linea_mpoi {
-      align-self: flex-start;
-
-      grid-column: 1/11;
-      grid-row: 3/4;
-    }
-    /* Logos */
-    .logos__mpoi {
-      display: flex;
-    }
-    .logo__world {
-      margin: 5px auto;
-      width: 60px;
-    }
-    .logo__excel {
-      margin: 5px auto;
-    }
-    .logo__pointer {
-      margin: 5px auto;
-    }
-
-    /* Tercera Caja */
-    .linea_window-nt {
-      align-self: flex-start;
-
-      grid-column: 1/11;
-      grid-row: 4/5;
-    }
-    .contenedor {
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-
-      grid-column: 1/11;
-      grid-row: 4/5;
-    }
-    .window__nt {
-      width: 150px;
-    }
-    .w-nt__logo {
-      margin: 5px auto;
-    }
-    .auxiliar__ventas {
-      width: 150px;
-    }
-    .auxiliar__ventas__logo {
-      margin: 0 auto;
-    }
-    .infotep__btn {
-      justify-self: center;
-      cursor: pointer;
-
-      grid-column: 1/11;
-      grid-row: 10/11;
-    }
-  }
-}
-
-// Caja de Estudios Medios
-.caja_estudiosMedios {
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
-  .tituloPrincipal_estudiosMedios {
-    background: $bgTeal;
-    border-top: 3px solid $bordeNegro;
-    border-bottom: 2px solid $bordeNegro;
-    border-left: 2px solid $bordeNegro;
-    border-right: 2px solid $bordeNegro;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    justify-self: center;
-    padding: 5px 20px;
-
-    display: flex;
-    grid-column: 1/2;
-    grid-row: 1/2;
-
-    .txt_tituloPrincipal_estudiosMedios {
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      font-size: 1.5rem;
-      color: $textBlanco;
-    }
-    .logo_tituloPrincipal_estudiosMedios {
-      margin-left: 5px;
-      fill: $logoBLanco;
-    }
-  }
-  .contenido_estudiosMedios {
-    border: 3px solid $bordeNegro;
-    border-radius: 20px;
-    padding: 0 5px;
-    background-color: #3581b1;
-    justify-self: center;
-
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(8, auto);
-
-    .titulo_conclusionEstudiosMedios {
-      color: $textBlanco;
-      padding: 10px 0;
-      justify-self: center;
-
-      grid-column: 1/9;
-      grid-row: 1/2;
-    }
-    .img_escuela {
-      border-radius: 5px;
-
-      grid-column: 1/9;
-      grid-row: 2/3;
-    }
-    .btn_estudiosMedios {
-      justify-self: center;
-      margin: 10px 0 0 0;
-
-      grid-column: 1/9;
-      grid-row: 8/9;
-    }
-  }
-}
-
-// Ventana Flotante de Estudios Medios
-.caja_ventanaFlotante_estudiosMedios {
-  position: absolute;
-  background-color: $bgBlanco;
-  overflow: hidden;
-  z-index: 2;
-  border-radius: 20px;
-  box-shadow: $sombraNegra;
-  border: 2px solid $bordeNegro;
-
-  display: none;
-  grid-column: 1/11;
-  grid-template-columns: repeat(1, auto);
-  grid-template-rows: repeat(2, auto);
-
-  .titulo_ventanaFlotante_estudiosMedios {
-    background-color: $bgTeal;
-    font-size: 1.50rem;
-    width: 100%;
-    color: $textBlanco;
-    text-align: center;
-
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  .contenedor_ventanaFlotante_estudiosMedios {
-    gap: 10px;
-    padding: 10px 5px;
-    justify-content: space-between;
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    grid-auto-rows: minmax(200px, auto);
-
-    .caja_certificadoBachiller {
-      border-radius: 15px;
-      padding: 10px 5px;
-      background-color: #e5e7e9;
-
-      .titulo_certificadoBachiller {
-        text-align: center;
-        color: $textTeal;
-        text-shadow: $sombraNegra;
-      }
-    }
-  }
-  .btnSalir_ventanaFlotante_estudiosMEdios {
-    cursor: pointer;
-    position: absolute;
-    justify-self: end;
-    align-self: end;
-    border: none;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.25rem;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    background-color: $bgTealOpacity25;
-
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .btnSalir_ventanaFlotante_estudiosMEdios:hover {
-    background-color: #008080;
-  }
-}
-
-/* Ventana flotante de Infotep */
-.ventanaFlotante_infotep {
-  width: 90%;
-  transition: all 0.5s ease-in-out;
-  position: absolute;
-  background: $bgBlanco;
-  box-shadow: 0 0 10px #000;
-  border-radius: 5px;
-  margin-left: -1200px;
-  z-index: 2;
-  visibility: visible;
-
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(auto);
-
-  .titulo_ventanaFlotante_infotep {
-    color: $textBlanco;
-    width: 100%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    padding: 10px 0;
-    font-size: 1.5rem;
-    text-align: center;
-    justify-self: center;
-    background: #008080;
-
-    display: grid;
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .contenedor_ventanaFlotante_infotep {
-    overflow: auto;
-    width: 100%;
-    height: 400px;
-    border-radius: 25px;
-    color: $textTeal;
-    padding: 10px 20px;
-    justify-self: center;
-    padding: 25px;
-    gap: 10px;
-
-    display: grid;
-    grid-column: 1/3;
-    grid-row: 2/3;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    grid-auto-rows: minmax(200px, auto);
-
-    .caja_diseñadorPaginasWeb {
-      background: #e5e7e9;
-      padding: 5px;
-      border-radius: 10px;
-    }
-    .txt_diseñadorPaginasWeb {
-      color: $textTeal;
-      text-align: center;
-      text-shadow: 0 0 2px #000;
-    }
-    .caja_powerPoint {
-      background: #e5e7e9;
-      padding: 5px;
-      border-radius: 10px;
-      justify-items: center;
-    }
-    .txt_powerPoint {
-      color: $textTeal;
-      text-align: center;
-      text-shadow: 0 0 2px #000;
-    }
-    .caja_ManejadorProgramasOficinaInternet {
-      background: #e5e7e9;
-      padding: 5px;
-      border-radius: 10px;
-      justify-items: center;
-    }
-    .txt_ManejadorProgramasOficinaInternet {
-      color: $textTeal;
-      text-align: center;
-      text-shadow: 0 0 2px #000;
-    }
-    .caja_window_nt {
-      background: #e5e7e9;
-      padding: 5px;
-      border-radius: 10px;
-      justify-items: center;
-    }
-    .txt_window_nt {
-      color: $textTeal;
-      text-align: center;
-      text-shadow: 0 0 2px #000;
-    }
-  }
-  /* Botón para Salir de Ventana Flotante del Infotep */
-  .btn_salir_ventanaFlotante_infotep {
-    position: absolute;
-    justify-self: end;
-    align-self: flex-end;
-    margin: 0 25px 25px 0;
-    padding: 20px 10px;
-    border-radius: 50%;
-    font-size: 2rem;
-    color: #17202a50;
-    background: #00808020;
-    text-transform: capitalize;
-    cursor: pointer;
-    outline: none;
-
-    grid-column: 1/3;
-  }
-
-  .btn_salir_ventanaFlotante_infotep:hover {
-    color: $textBlanco;
-    background: #008080;
-  }
-}
-.ventanaFlotante_infotep_Active {
-  margin-left: 0;
-  transition: all 0.3s ease-in-out;
-  visibility: visible;
-}
-
-/* Cajón de Bachiller */
-
-.txt__bachiller {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-left: 50px;
-}
-.insignia__logo {
-  display: flex;
-  width: 25px;
-  height: 25px;
-}
-.insignia__img {
-  width: 100%;
-}
-.bachiller__imagen {
-  margin: 0 auto;
-  margin-bottom: 16px;
-  width: 250px;
-}
-.bachiller__img {
-  width: 250px;
-}
-
-/* Fin del Cajón de Bachiller */
-
-/* Caja de Contactos   Caja de Contactos   Caja de Contactos   Caja de Contactos   Caja de Contactos   Caja de Contactos   */
-
-.titulo_contactos {
-  grid-column: 1/11;
-  grid-row: 4/5;
-}
-.caja_contactos {
-  box-shadow: 0px 0px 10px $sombraNegra;
-  background: $bgBlanco;
-  padding: 20px;
-  margin: 0 50px 20px 50px;
-  color: $textNegro;
-  border-radius: 20px;
-  grid-column: 1/11;
-  grid-row: 5/6;
-
-  display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px 1fr);
-  grid-template-rows: minmax(300px, auto);
-  justify-content: space-evenly;
-}
-
-/* Información Adicional */
-
-.caja_informacion {
-  margin-right: 20px;
-  display: grid;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  grid-template-columns: repeat(10, auto);
-  grid-template-rows: minmax(1fr, auto);
-}
-.titulo_columna1 {
-  grid-column: 1/10;
-  grid-row: 1/2;
-}
-.parrafo_columna1 {
-  grid-column: 1/10;
-  grid-row: 2/10;
-  font-family: "Style Script";
-  font-size: 1.5625rem;
-  line-height: 30px;
-}
-
-/* Redes Sociales */
-
-.caja_redes_sociales {
-  margin-right: 20px;
-  display: grid;
-  grid-column: 2/3;
-  grid-row: 1/2;
-  grid-template-columns: repeat(20, auto);
-  grid-template-rows: repeat(20, auto);
-}
-.titulo_columna2 {
-  grid-column: -1/-20;
-  grid-row: 1/2;
-}
-
-/* Facebook */
-
-.caja_facebook {
-  width: 150px;
-  justify-self: start;
-  align-items: center;
-  align-self: center;
-  display: flex;
-  grid-column: -1/-20;
-  grid-row: 2/4;
-}
-.logo_facebook {
-  align-items: center;
-  margin-right: 10px;
-}
-
-/* Twitter */
-
-.caja_twitter {
-  width: 150px;
-  justify-self: start;
-  align-self: center;
-  align-items: center;
-  display: flex;
-  grid-column: -1/-20;
-  grid-row: 4/6;
-}
-.logo_twitter {
-  align-items: center;
-  margin-right: 10px;
-}
-
-/* Instagram */
-
-.caja_instagram {
-  justify-self: start;
-  align-items: center;
-  align-self: center;
-  display: flex;
-  grid-column: -1/-20;
-  grid-row: 6/8;
-}
-
-.logo_instagram {
-  align-items: center;
-  margin-right: 10px;
-}
-
-/* Whatsapp */
-
-.caja_whatsapp {
-  grid-column: -1/-20;
-  grid-row: 8/10;
-}
-.logo_whatsapp {
-  align-items: center;
-  margin-right: 10px;
-}
-
-/* Cajón de Códigos QR */
-
-.caja_codigo_facebook {
-  display: grid;
-  padding: 5px;
-  justify-items: center;
-  grid-column: 1/5;
-  grid-row: 15/17;
-}
-.txt_codigo_facebook {
-  color: #0d8df2;
-  text-decoration: underline 1px solid #1a5276;
-}
-.caja_codigo_twitter {
-  display: grid;
-  padding: 5px;
-  justify-items: center;
-  grid-column: 5/10;
-  grid-row: 15/17;
-}
-.txt_codigo_twitter {
-  color: #1aa2f2;
-  text-decoration: underline 1px solid #3498db;
-}
-.caja_codigo_instagram {
-  display: grid;
-  padding: 5px;
-  justify-items: center;
-  grid-column: 10/15;
-  grid-row: 15/17;
-}
-.txt_codigo_instagram {
-  color: #ee425f;
-  text-decoration: underline 1px solid #ec7063;
-}
-.caja_codigo_ws {
-  display: grid;
-  padding: 5px;
-  justify-items: center;
-  grid-column: 15/20;
-  grid-row: 15/17;
-}
-.txt_codigo_ws {
-  color: #31cf5d;
-  text-decoration: underline 1px solid #58d68d;
-}
-/* Información de Contactos */
-
-.caja_info_contactos {
-  display: grid;
-  grid-column: 3/4;
-  grid-row: 1/2;
-  grid-template-columns: repeat(10, auto);
-  grid-template-rows: repeat(10, auto);
-}
-.titulo_columna3 {
-  grid-column: 1/11;
-  grid-row: 1/2;
-}
-/* Dirección */
-.caja_direccion {
-  display: grid;
-  box-shadow: 0px 5px 1px $sombraNegra;
-  border-radius: 15px;
-  align-items: center;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: minmax(1fr, auto);
-  grid-column: 1/11;
-  grid-row: 2/4;
-  margin-bottom: 10px;
-}
-.logo_direccion {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.txt_direccion {
-  margin-left: 10px;
-  grid-column: 2/10;
-  grid-row: 1/2;
-}
-/* Teléfono */
-.caja_telefono {
-  box-shadow: 0px 5px 1px $sombraNegra;
-  border-radius: 15px;
-  margin-bottom: 10px;
-  display: grid;
-  grid-column: 1/11;
-  grid-row: 4/6;
-  align-items: center;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: minmax(1fr, auto);
-}
-.logo_telefono {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.txt_telefono {
-  grid-column: 2/10;
-  grid-row: 1/2;
-  margin-left: 10px;
-}
-/* Email */
-.caja_gmail {
-  box-shadow: 0px 5px 1px $sombraNegra;
-  border-radius: 15px;
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: minmax(1fr, auto);
-  grid-column: 1/11;
-  grid-row: 6/11;
-}
-.logo_gmail {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.txt_gmail {
-  margin-left: 10px;
-  grid-column: 2/10;
-  grid-row: 1/2;
-}
-/* Copy Right */
-
-.copyright {
-  grid-column: 1/2;
-  display: flex;
-  justify-self: start;
-  align-items: center;
-  font-size: 1.25rem;
-}
-.logo_copyright {
-  margin-right: 5px;
-}
-.txt_copyright {
-  text-decoration: underline 1px solid #000;
-}
-.caja_pieDePagina {
-  display: grid;
-
-  grid-template-columns: auto;
-  grid-template-rows: repeat(2, auto);
-}
-
-/* Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche   Modo noche */
-.caja_modo_noche {
-  display: grid;
-  grid-column: -2/-3;
-  grid-row: -1/-2;
-  grid-template-columns: repeat(8, auto);
-  grid-template-rows: repeat(8, auto);
-}
-.modo_noche {
-  display: flex;
-  width: 70px;
-  height: 25px;
-  justify-self: end;
-  align-self: center;
-  background: $bgBlanco;
-  padding: 5px 4px;
-  border-radius: 50px;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  transition: 0.2s;
-  justify-self: center;
-
-  grid-column: -1/-9;
-  grid-row: 1/9;
-}
-.interruptor_off {
-  content: "";
-  display: block;
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  background: $bgTeal;
-  top: 0;
-  left: 0;
-  right: unset;
-  border-radius: 100px;
-  border: none;
-  transition: 0.5s;
-}
-.dark_mode_flotante {
-  width: auto;
-  height: 40px;
-  border-radius: 25px;
-  padding: 5px 10px;
-  display: grid;
-  background: $bgTeal;
-  cursor: pointer;
-  text-decoration: underline transparent;
-  opacity: 0;
-  pointer-events: none;
-  margin-left: -20px;
-  margin-top: -25px;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.dark_mode_flotante::after {
-  content: "";
-  background: $bgTeal;
-  width: 25px;
-  height: 25px;
-  transform: rotate(45deg);
-  margin-top: -5px;
-  justify-self: center;
-  border-radius: 2px;
-}
-.modo_noche:hover .dark_mode_flotante {
-  /* esto es para al hacer estado hover en la barra de modo_noche poder presentarse el elemento */
-  opacity: 1;
-  margin-top: -72px;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-  /* visibility: visible; */
-  /* place-items: center; */
-  /* transform: translateX(-20%) rotate(45deg); */
-}
-.txt_dark_mode_flotante1 {
-  z-index: 1;
-  text-align: center;
-}
-/* formatos noche   formatos noche   formatos noche   formatos noche   formatos noche   formatos noche   formatos noche   */
-
-.interruptor_on {
-  content: "";
-  display: block;
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  background: $bgTeal;
-  top: 0;
-  left: unset;
-  right: 0;
-  border-radius: 100px;
-  border: none;
-}
-.navegador_dark_mode {
-  background-image: url(imagenes_1/Verdes-suaves-opacity50.png);
-}
-
-/* Caja modo noche    Caja modo noche    Caja modo noche    Caja modo noche    Caja modo noche */
-
-.dark_mode {
-  color: $textBlanco;
-  background: $bgNegro;
-}
-.dark_mode_letras {
-  color: $textBlanco;
-}
-.dark_mode_sombra {
-  box-shadow: 0px 0px 20px $sombraBlanca;
-  color: $textBlanco;
-  background: $bgNegro;
-}
-/* Tipo de Sombra especial  */
-.dark_mode_sombraEspecial {
-  box-shadow: 0px -12px 20px $sombraBlanca;
-  color: $textBlanco;
-  background: $bgNegro;
-}
-
-.texto {
-  margin: 50px;
-  font-size: 40px;
-  text-decoration: none;
-  color: $textNegro;
-}
-.texto:hover {
-  background: #0d8df2;
-  border-radius: 50px;
-}
-
-/* VENTANAS FLOTANTES INACTIVAS  */
-
-.contenedor_img_menu_nav {
-  display: none;
-}

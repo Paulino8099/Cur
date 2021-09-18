@@ -1,54 +1,121 @@
 // Todas las Variables
-var boton_modo_noche = document.getElementById("modo_noche");
+var btn_modoMoche = document.getElementById("btn_modoMoche");
 
 var body = document.getElementById("body"); //
 var caja_estudios = document.getElementById("caja_estudios"); //Cajón de Estudios
-var boton_noche = document.getElementById("interruptor_off"); 
 var imagen_navegador_fondo = document.getElementById("navegador");
 var cajon_contactos = document.getElementById("contactos"); //Cajón de los Contactos
 var titulo_contactos = document.getElementById("titulo_contactos"); //Titulo de Estudios
 var txt_facebook = document.getElementById("txt_facebook"); 
-var txt__whatsapp = document.getElementById("txt__whatsapp"); //
+var caja_infotep = document.getElementById("caja_infotep"); //CAJA DE INFOTEP
+var caja_estudiosMedios = document.getElementById("caja_estudiosMedios"); //CAJA DE ESTUDIOS MEDIOS
+var txt_whatsapp = document.getElementById("txt_whatsapp"); //
 var txt_twitter = document.getElementById("txt_twitter");
 var txt_instagram = document.getElementById("txt_instagram");
-var infotep__btn = document.getElementById("infotep__btn");
-var ventanaFlotante_infotep = document.getElementById("ventanaFlotante_infotep") //Ventana Flotante del Cajón de infotep
 var btn_salir_ventanaFlotante_infotep = document.getElementById("btn_salir_ventanaFlotante_infotep") //Botón Salir de Ventana Flotante de Infotep
 var btn_3puntos = document.getElementById("btn_3puntos"); //Botón de 3 Puntos Dispositivos Móviles
 var menu_navegador = document.getElementById("menu_navegador"); //Menú del Navegador
 
-modo_noche.addEventListener("click", function() {
-  txt_facebook.classList.toggle("dark_mode_letras");
-  txt_instagram.classList.toggle("dark_mode_letras");
-  txt_twitter.classList.toggle("dark_mode_letras");
-  txt__whatsapp.classList.toggle("dark_mode_letras");
-  
-  boton_modo_noche.classList.toggle("dark_mode_boton");
-  caja_estudios.classList.toggle("dark_mode_sombra"); //Cajón de Estudios
-  boton_noche.classList.toggle("interruptor_on");
-  imagen_navegador_fondo.classList.toggle("navegador_dark_mode"); //Imágen del Navegador
-  cajon_contactos.classList.toggle("dark_mode_sombra"); //Cajón de los Contactos
-  titulo_contactos.classList.toggle("dark_mode_sombraEspecial"); //Titulo de los Contactos
+// MODO NOCHE
+btn_modoMoche.addEventListener('click', function() {
+  body.classList.toggle("darkMode");
+  btn_modoMoche.classList.toggle("darkMode");
+  imagen_navegador_fondo.classList.toggle("darkMode");
+  // MODO NOCHE EN CAJON DE NAVEGADOR (HEADER)
+  document.querySelector(".titulo_navegador").classList.toggle("darkMode");
+  document.querySelector(".caja_flotante_darkMode").classList.toggle("darkMode");
+  document.querySelector(".formato_titulo_cajas_mayores").classList.toggle("darkMode");
+  document.querySelector(".subMenu1").classList.toggle("darkMode");
+  document.querySelector(".subMenu2").classList.toggle("darkMode");
+  document.querySelector(".subMenu3").classList.toggle("darkMode");
+  document.querySelector(".subMenu4").classList.toggle("darkMode");
+  // MODO NOCHE CAJON DE ESTUDIOS
+  document.querySelector(".caja_estudios").classList.toggle("darkMode");
+  document.querySelector(".caja_infotep").classList.toggle("darkMode");
+  document.querySelector(".txt_titulo_infotep").classList.toggle("darkMode");
+  document.querySelector(".dpw_titulo").classList.toggle("darkMode");
+  document.querySelector(".mpoi_titulo").classList.toggle("darkMode");
+  document.querySelector(".w-nt_titulo").classList.toggle("darkMode");
+  document.querySelector(".titulo_auxiliar_ventas").classList.toggle("darkMode");
+  document.querySelector(".img_auxiliarVentas").classList.toggle("darkMode");
+  document.querySelector(".titulo_infotep").classList.toggle("darkMode");
+  document.querySelector(".caja_contenido_infotep").classList.toggle("darkMode");
+  document.querySelector(".tituloPrincipal_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".Formato_btn").classList.toggle("darkMode");
+  document.querySelector(".txt_tituloPrincipal_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".logo_tituloPrincipal_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".titulo_conclusionEstudiosMedios").classList.toggle("darkMode");
+  // MODO NOCHE DE CAJON DE CONTACTOS
+  document.querySelector(".titulo_contactos").classList.toggle("darkMode");
+  document.querySelector(".caja_contactos").classList.toggle("darkMode");
+  document.querySelector(".titulo_columna1").classList.toggle("darkMode");
+  document.querySelector(".parrafo_columna1").classList.toggle("darkMode");
+  document.querySelector(".titulo_columna2").classList.toggle("darkMode");
+  document.querySelector(".txt_facebook").classList.toggle("darkMode");
+  document.querySelector(".txt_twitter").classList.toggle("darkMode");
+  document.querySelector(".txt_instagram").classList.toggle("darkMode");
+  document.querySelector(".txt_whatsapp").classList.toggle("darkMode");
+  document.querySelector(".titulo_columna3").classList.toggle("darkMode");
+  document.querySelector(".logo_direccion").classList.toggle("darkMode");
+  document.querySelector(".txt_direccion").classList.toggle("darkMode");
+  document.querySelector(".logo_telefono").classList.toggle("darkMode");
+  document.querySelector(".txt_telefono").classList.toggle("darkMode");
+  document.querySelector(".logo_gmail").classList.toggle("darkMode");
+  document.querySelector(".txt_gmail").classList.toggle("darkMode");
+  document.querySelector(".logo_copyright").classList.toggle("darkMode");
+  document.querySelector(".txt_copyright").classList.toggle("darkMode");
+  document.querySelector(".caja_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".caja_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".caja_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".caja_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".caja_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".caja_estudiosMedios").classList.toggle("darkMode");
+  document.querySelector(".auxiliar_ventas").  classList.toggle("darkMode");
 });
 
-btn_3puntos.addEventListener("click", function() {
+// BOTON DE 3 PUNTOS
+btn_3puntos.addEventListener('click', function() {
   menu_navegador.classList.toggle("menu_navegador_active"); //Menú del Navegador
 });
 
-// Activar la imagen del navegador en grande
-document.getElementById("imagen_navegador").addEventListener("click", function() {
-  document.getElementById("contenedor_img_nav_float").classList.toggle("contenedor_img_nav_float_active");
+// ACTIVAR LA IMAGEN EN GRANDE DEL NAVEGADOR
+document.getElementById("imagen_navegador").addEventListener('click', function() {
+  document.getElementById("contenedor_img_nav_float").classList.toggle("active");
 });
-// Desactivar la imagen del navegador en grande
-document.getElementById("btn_img_nav_float").addEventListener("click", function() {
-  document.getElementById("contenedor_img_nav_float").classList.toggle("contenedor_img_nav_float_active");
+// DESACTIVAR LA IMAGEN EN GRANDE DEL NAVEGADOR
+document.getElementById("btn_img_nav_float").addEventListener('click', function() {
+  document.getElementById("contenedor_img_nav_float").classList.toggle("active");
+});
+// ACTIVAR LA VENTANA FLOTANTE DE INFOTEP
+var infotep_btn = document.getElementById("infotep_btn");
+var ventanaFlotante_infotep = document.getElementById("ventanaFlotante_infotep")
+infotep_btn.addEventListener('click', function() {
+  ventanaFlotante_infotep.classList.toggle("active");
+  caja_infotep.classList.toggle("opacidad25");
+  caja_estudiosMedios.classList.toggle("opacidad25")
+});
+// DESACTIVAR LA VENTANA FLOTANTE DE "INFOTEP"
+btn_salir_ventanaFlotante_infotep.addEventListener('click', function() {
+  ventanaFlotante_infotep.classList.toggle("active");
+  caja_infotep.classList.toggle("opacidad25");
+  caja_estudiosMedios.classList.toggle("opacidad25")
 });
 
+// ACTIVAR LA VENTANA DE "ESTUDIOS MEDIOS"
+var btn_estudiosMedios = document.getElementById("btn_estudiosMedios");
+var cajaFlotante_estudioMedios = document.getElementById("caja_ventanaFlotante_estudiosMedios");
 
-btn_salir_ventanaFlotante_infotep.addEventListener("click", function() {
-  ventanaFlotante_infotep.classList.toggle("ventanaFlotante_infotep_Active");
+btn_estudiosMedios.addEventListener('click', function() {
+  cajaFlotante_estudioMedios.classList.toggle("active");
+  caja_infotep.classList.toggle("opacidad25");
+  caja_estudiosMedios.classList.toggle("opacidad25")
 });
 
-infotep__btn.addEventListener("click", function() {
-  ventanaFlotante_infotep.classList.toggle("ventanaFlotante_infotep_Active");
+// DESACTIVAR LA VENTANA FLOTANTE DE "ESTUDIOS MEDIOS"
+var btn_salir_ventanaFlotante_estudiosMedios = document.getElementById("btnSalir_ventanaFlotante_estudiosMedios");
+
+btn_salir_ventanaFlotante_estudiosMedios.addEventListener('click', function() {
+  cajaFlotante_estudioMedios.classList.toggle("active");
+  caja_infotep.classList.toggle("opacidad25");
+  caja_estudiosMedios.classList.toggle("opacidad25")
 });

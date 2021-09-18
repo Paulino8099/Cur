@@ -969,7 +969,7 @@
     -ms-grid-rows: (auto)[8];
         grid-template-rows: repeat(8, auto);
   }
-  .modo_noche {
+  .btn_modoMoche {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1042,7 +1042,7 @@
         justify-self: center;
     border-radius: 2px;
   }
-  .modo_noche:hover .dark_mode_flotante {
+  .btn_modoMoche:hover .dark_mode_flotante {
     /* esto es para al hacer estado hover en la barra de modo_noche poder presentarse el elemento */
     opacity: 1;
     margin-top: -72px;

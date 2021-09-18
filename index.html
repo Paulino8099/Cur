@@ -19,9 +19,9 @@
 
 <body id="body">
     <header id="navegador" class="navegador">
-        <h3 class="titulo_navegador">Hoja de Vida</h3>
-        <div class="caja_titulo1_navegador">
-            <h3 class="titulo_navegador1">Hoja de Vida</h3>
+        <h3 id="titulo_navegador" class="titulo_navegador">Hoja de Vida</h3>
+        <div id="caja_titulo1_navegador" class="caja_titulo1_navegador">
+            <h3 id="titulo_navegador1" class="titulo_navegador1">Hoja de Vida</h3id>
             <!-- Botón de Navegación -->
             <svg id="btn_3puntos" class="btn_3puntos formato_logos_40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
         </div>
@@ -31,159 +31,95 @@
                 <img class="img_menu_navegador formato_img_50px" src="imagenes_1/david de negro.jpg" alt="">
                 <h5 class="nombre_img_nav_cell">David Paulino</h5>
             </div>
-            <a href="#" class="submenu submenu1">Estudios</a>
-            <a href="#" class="submenu submenu2">Experiencias</a>
-            <a href="#" class="submenu submenu3">Información</a>
-            <a href="#piePagina" class="submenu submenu4">Contacto</a>
+            <a href="#" class="submenu subMenu1">Estudios</a>
+            <a href="#" class="submenu subMenu2">Experiencias</a>
+            <a href="#" class="submenu subMenu3">Información</a>
+            <a href="#piePagina" class="submenu subMenu4">Contacto</a>
         </ul>
         <img id="imagen_navegador" class="imagen_navegador formato_img_250px" src="imagenes_1/david de negro.jpg" alt="">
 
-        <!-- Imágen Flotante Navegador Principal -->
+        <!-- IMAGEN FLOTANTE PARA EL NAVEGADOR PRINCIPAL (HEADER) -->
         <div id="contenedor_img_nav_float" class="contenedor_img_nav_float">
-            <img id="img_nav_float" class="img_nav_float formato_img_450px" src="imagenes_1/david de negro.jpg" alt="">
-            <button id="btn_img_nav_float" class="btn_img_nav_float">X</button>
-            <div class="caja_informacionPersonal">
-                <h3>Nombre: David</h3>
-                <h3>Apellido: Paulino Reyes</h3>
-                <h3>Nacionalidad: Dominicana</h3>
-                <h3>Edad: 20 Años</h3>
-                <h3>Fecha de Nacimiento: 14/10/2000</h3>
-                <h3>Género: Masculino</h3>
-            </div>
-
+                <img id="img_nav_float" class="img_nav_float formato_img_450px" src="imagenes_1/david de negro.jpg" alt="">
+                <button id="btn_img_nav_float" class="btn_img_nav_float">X</button>
+                <div class="caja_informacionPersonal">
+                    <h3>Nombre: David</h3>
+                    <h3>Apellido: Paulino Reyes</h3>
+                    <h3>Nacionalidad: Dominicana</h3>
+                    <h3>Edad: 20 Años</h3>
+                    <h3>Fecha de Nacimiento: 14/10/2000</h3>
+                    <h3>Género: Masculino</h3>
+                </div>
         </div>
-        </img>
 
         <h2 class="nombre">David Paulino</h2>
-        <div class="txt__imagen">
+        <div class="txt_imagen">
             Diseñador Web/Programador
         </div>
 
-        <!-- Modo Claro/Oscuro -->
-        <div class="caja_modo_noche">
-            <ins id="modo_noche" class="modo_noche">
-                <div id="interruptor_off" class="interruptor_off">
-                </div>
-                <div class="dark_mode_flotante">
-                    <h5 class="txt_dark_mode_flotante1">
-                        Modo Claro/Oscuro 
-                    </h5>
-                    <h5 class="txt_dark_mode_flotante2">
-                    </h5>
-                </div>
-            </ins>
+        <!-- MODO CLARO/OSCURO -->
+        <div id="btn_modoMoche" class="btn_modoMoche">
+            <!-- IMAGEN DE LA LUNA MODO OSCURO/CLARO -->
+            <svg class="img_luna" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"></path></svg>
+            <!-- IMAGEN DEL SOL MODO CLARO/OSCURO -->
+            <svg class="img_sol" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg>
+
+            <div class="caja_flotante_darkMode">
+                <h5 class="txt_caja_flotante_darkMode">Modo Claro/Oscuro</h5>
+            </div> 
         </div>
 
     </header>
 
-    <!-- Caja de Estudios    Caja de Estudios    Caja de Estudios    Caja de Estudios    Caja de Estudios    Caja de Estudios     -->
-
-    <h1 id="titulo_contactos" class="titulo_caja_Estudios formato__titulo_cajas_mayores">Estudios</h1>
+    <!-- CAJON DE ESTUDIOS  CAJON DE ESTUDIOS  CAJON DE ESTUDIOS  CAJON DE ESTUDIOS  CAJON DE ESTUDIOS  -->
+    <h1 id="titulo_caja_Estudios" class="titulo_caja_Estudios formato_titulo_cajas_mayores">Estudios</h1>
     <section id="caja_estudios" class="caja_estudios">
                                                         <!--Caja de Infotep   -->
-        <div class="caja_infotep">
+        <div id="caja_infotep" class="caja_infotep">
             <!-- Titulo Infotep -->
             <div class="titulo_infotep">
-                    <h1 class="txt__infotep">Infoteb</h1>
+                    <h1 class="txt_titulo_infotep">Infoteb</h1>
                     <img class="infotep_logo formato_logos_25px" src="imagenes_1/png logos/logo-infotep-png-cuadrado-HD.png" alt="">
             </div>
             <!-- Contenido de Infotep -->
-            <div class="caja_contenido_infotep Diametro__caja">
+            <div class="caja_contenido_infotep Diametro_caja">
                 <!-- Primera Caja Interior -->
-                <div class="caja__dpw formato__cajas_infotep">
-                    <h4 class="dpw__titulo formato__letras_titulos_pequeños formato__hover">Disenador de Páginas Web</h4>
+                <div class="caja_dpw formato_cajas_infotep">
+                    <h4 class="dpw_titulo formato_letras_titulos_pequeños formato_hover">Disenador de Páginas Web</h4>
                     <img class="logo_dpw formato_logos_50px" src="imagenes_1/png logos/triple www.png" alt="">
                     <hr class="linea_dpw">
                 </div>
                                         
                 <!-- Segunda Caja Interior -->
-                <div class="microsoft__oficce formato__cajas_infotep">
-                    <h4 class="mpoi__titulo formato__letras_titulos_pequeños formato__hover">Manejador de Programas de Oficinas y Internet</h4>
-                    <div class="logos__mpoi">
+                <div class="microsoft_oficce formato_cajas_infotep">
+                    <h4 class="mpoi_titulo formato_letras_titulos_pequeños formato_hover">Manejador de Programas de Oficinas y Internet</h4>
+                    <div class="logos_mpoi">
                         <!-- Logo de World -->
-                        <img class="logo__world formato_logos_50px" src="imagenes_1/png logos/logo-word-office.png" alt="">
+                        <img class="logo_world formato_logos_50px" src="imagenes_1/png logos/logo-word-office.png" alt="">
                         <!-- Logo de Excel -->
-                        <img class="logo__excel formato_logos_50px" src="imagenes_1/png logos/Microsoft_Office_Excel_(2019–present).svg.png" alt="">
+                        <img class="logo_excel formato_logos_50px" src="imagenes_1/png logos/Microsoft_Office_Excel_(2019–present).svg.png" alt="">
                         <!-- Logo de Pointer -->
-                        <img class="logo__pointer formato_logos_50px" src="imagenes_1/png logos/Microsoft_Office_PowerPoint_(2019–present).svg.png" alt="">
+                        <img class="logo_pointer formato_logos_50px" src="imagenes_1/png logos/Microsoft_Office_PowerPoint_(2019–present).svg.png" alt="">
                     </div>
                     <hr class="linea_mpoi">
                 </div>
     
                 <!-- Tercera Caja Interior -->
-                <div class="contenedor formato__cajas_infotep">
+                <div class="contenedor formato_cajas_infotep">
                     <!-- Cajón de Window-NT -->
-                    <div class="window__nt">
-                        <h4 class="w-nt__titulo formato__letras_titulos_pequeños formato__hover">Window-NT</h4>
-                        <img class="w-nt__logo formato_logos_50px" src="imagenes_1/png logos/Windows_Logo_(1992-2001).svg.png" alt="">
+                    <div class="window_nt">
+                        <h4 class="w-nt_titulo formato_letras_titulos_pequeños formato_hover">Window-NT</h4>
+                        <img class="w-nt_logo formato_logos_50px" src="imagenes_1/png logos/Windows_Logo_(1992-2001).svg.png" alt="">
                     </div>
                     <hr>
                     <!-- Cajón de Auxiliar de Ventas -->
-                    <div class="auxiliar__ventas">
-                        <h4 class="titulo__auxiliar__ventas formato__letras_titulos_pequeños formato__hover">Auxiliar de Ventas</h4>
-                        <img class="auxiliar__ventas__logo formato_logos_50px" src="imagenes_1/png logos/Auxiliar de Ventas Robot negro.png" alt="">
-                    </div>
+                    <div class="auxiliar_ventas">
+                        <h4 class="titulo_auxiliar_ventas formato_letras_titulos_pequeños formato_hover">Auxiliar de Ventas</h4>
+                        <svg class="img_auxiliarVentas formato_logos_50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-9.424c.618-.735 1-1.692 1-2.746V5c0-1.654-1.346-3-3-3zm1 3v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 8V4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 11H6v-3h4v3z"></path></svg>                    </div>
                 </div>
-                <button id="infotep__btn" class="infotep__btn Formato__btn">Ver Mas</button>
+                <button id="infotep_btn" class="infotep_btn Formato_btn">Ver Mas</button>
             </div>
         </div>
-        
-        <!-- Caja de Estudios Medios -->
-        <div class="caja_estudiosMedios">
-            <!-- Titulo Principal de Estudios Medios -->
-            <div class="tituloPrincipal_estudiosMedios">
-                <h2 class="txt_tituloPrincipal_estudiosMedios">Estudios Medios</h2>
-                <svg class="logo_tituloPrincipal_estudiosMedios formato_logos_30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10h-2V4h1V2H4v2h1v6H3a1 1 0 0 0-1 1v9h20v-9a1 1 0 0 0-1-1zm-7 8v-4h-4v4H7V4h10v14h-3z"></path><path d="M9 6h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2z"></path></svg>
-            </div>
-            <div class="contenido_estudiosMedios">
-                <h2 class="titulo_conclusionEstudiosMedios">Conclusión de Estudios Medios</h2>
-                <img class="img_escuela formato_img_300px" src="imagenes_1/escuela.JPG" alt="">
-                <button class="btn_estudiosMedios Formato__btn">Ver Mas</button>
-            </div>
-        </div>
-        <!-- Ventana Flotante de Estudios Medios -->
-        <div class="caja_ventanaFlotante_estudiosMedios">
-            <h3 class="titulo_ventanaFlotante_estudiosMedios">Estudios Medios</h3>
-            <div class="contenedor_ventanaFlotante_estudiosMedios">
-                <!-- Contenedor de Certificado de Bachiller -->
-                <div class="caja_certificadoBachiller">
-                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
-                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
-                </div>
-                <!-- Contenedor de Certificado de Bachiller -->
-                <div class="caja_certificadoBachiller">
-                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
-                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
-                </div>
-                <!-- Contenedor de Certificado de Bachiller -->
-                <div class="caja_certificadoBachiller">
-                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
-                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
-                </div>
-                <!-- Contenedor de Certificado de Bachiller -->
-                <div class="caja_certificadoBachiller">
-                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
-                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
-                </div>
-                <!-- Contenedor de Certificado de Bachiller -->
-                <div class="caja_certificadoBachiller">
-                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
-                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
-                </div>
-                <!-- Contenedor de Certificado de Bachiller -->
-                <div class="caja_certificadoBachiller">
-                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
-                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
-                </div>
-                <!-- Contenedor de Certificado de Bachiller -->
-                <div class="caja_certificadoBachiller">
-                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
-                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
-                </div>
-            </div>
-            <button class="btnSalir_ventanaFlotante_estudiosMEdios">Salir</button>
-        </div>
-
                                              <!-- Ventana Flotante de Infotep -->
         <div id="ventanaFlotante_infotep" class="ventanaFlotante_infotep">
             <h2 class="titulo_ventanaFlotante_infotep">Certificados</h2>
@@ -211,8 +147,33 @@
             </div>
             <button id="btn_salir_ventanaFlotante_infotep" class="btn_salir_ventanaFlotante_infotep">Salir</button>
         </div>
+                                                    <!-- Fin Caja de Infoteb -->
         
-                                                    <!--Fin Caja de Infoteb   -->
+        <!-- Caja de Estudios Medios -->
+        <div id="caja_estudiosMedios" class="caja_estudiosMedios">
+            <!-- Titulo Principal de Estudios Medios -->
+            <div class="tituloPrincipal_estudiosMedios">
+                <h2 class="txt_tituloPrincipal_estudiosMedios">Estudios Medios</h2>
+                <svg class="logo_tituloPrincipal_estudiosMedios formato_logos_30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10h-2V4h1V2H4v2h1v6H3a1 1 0 0 0-1 1v9h20v-9a1 1 0 0 0-1-1zm-7 8v-4h-4v4H7V4h10v14h-3z"></path><path d="M9 6h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2z"></path></svg>
+            </div>
+            <div class="contenido_estudiosMedios">
+                <h2 class="titulo_conclusionEstudiosMedios">Conclusión de Estudios Medios</h2>
+                <img class="img_escuela formato_img_300px" src="imagenes_1/escuela.JPG" alt="">
+                <button id="btn_estudiosMedios" class="btn_estudiosMedios Formato_btn">Ver Mas</button>
+            </div>
+        </div>
+        <!-- Ventana Flotante de Estudios Medios -->
+        <div id="caja_ventanaFlotante_estudiosMedios" class="caja_ventanaFlotante_estudiosMedios">
+            <h3 class="titulo_ventanaFlotante_estudiosMedios">Estudios Medios</h3>
+            <div class="contenedor_ventanaFlotante_estudiosMedios">
+                <!-- Contenedor de Certificado de Bachiller -->
+                <div class="caja_certificadoBachiller">
+                    <h3 class="titulo_certificadoBachiller">Certificado de Bachiller</h3>
+                    <img class="img_certificadoBachiller formato_img_automatica" src="imagenes_1/Certificado de Bachiller.jpg" alt="">
+                </div>
+            </div>
+            <button id="btnSalir_ventanaFlotante_estudiosMedios" class="btnSalir_ventanaFlotante_estudiosMedios">Salir</button>
+        </div>
     </section>
 
     <!-- Cajón de Experiencias   Cajón de Experiencias   Cajón de Experiencias   Cajón de Experiencias -->
@@ -226,9 +187,7 @@
     
    
 <!-- Caja de Contactos   Caja de Contactos   Caja de Contactos   Caja de Contactos   Caja de Contactos   Caja de Contactos   -->
-                                        <!-- Información Adicional -->
-    <h1 id="titulo_contactos" class="titulo_contactos formato__titulo_cajas_mayores">Contactos</h1>
-
+    <h1 id="titulo_contactos" class="titulo_contactos formato_titulo_cajas_mayores">Contactos</h1>
                                                     <!-- Caja de Contactos -->
     <footer id="contactos" class="caja_contactos">
         <div id="caja_informacion" class="caja_informacion"> 
@@ -251,7 +210,7 @@
                 <img class="logo_facebook formato_logos_30px" src="imagenes_1/logofacebook.png" alt="">
                 <!-- Texto de Facebook -->
                 <a href="https://www.facebook.com/profile.php?id=100011417857802" target="_blank"
-                    id="txt_facebook" class="txt_facebook formato__letras formatos_titulos_20px">
+                    class="txt_facebook formato_letras formatos_titulos_20px">
                     Facebook
                 </a>
             </div>
@@ -261,7 +220,7 @@
                 <img class="logo_twitter formato_logos_30px" src="imagenes_1/logo twitter.png" alt="">
                 <!-- Texto de Twitter -->
                 <a href="https://twitter.com/DavidPa18655922?s=09" target="_blank"
-                    id="txt_twitter" class="txt_twitter formatos_titulos_20px"> Twitter
+                    class="txt_twitter formatos_titulos_20px"> Twitter
                 </a>
             </div>
             <!-- Instagram -->
@@ -270,7 +229,7 @@
                 <img class="logo_instagram formato_logos_30px" src="imagenes_1/logo instagram.png" alt="">
                 <!-- Texto de Instagram -->
                 <a href="https://www.instagram.com/paulino9699?r=nametag" target="_blank"
-                    id="txt_instagram" class="txt_instagram formatos_titulos_20px" target="_blank">Instagram
+                    class="txt_instagram formatos_titulos_20px" target="_blank">Instagram
                 </a>
             </div>
             <!-- Whatsapp -->
@@ -279,7 +238,7 @@
                 <img class="logo_whatsapp formato_logos_30px" src="imagenes_1/logo whatsapp.png" alt="">
                 <!-- Texto de Whatsapp -->
                 <a href="https://wa.me/qr/SYFMEEAOPS2NJ1" target="_blank"
-                    id="txt__whatsapp" class="txt__whatsapp formatos_titulos_20px">Whatsapp
+                    class="txt_whatsapp formatos_titulos_20px">Whatsapp
                 </a>
             </div>
     
@@ -304,18 +263,15 @@
             </div>
             <!-- Código QR de Instagram -->
             <div class="caja_codigo_instagram">
-    
                 <!-- Logo de Instagram -->
                 <img class="codigo-QR_instagram_imagen formato_logos_75px" src="imagenes_1/Código QR de Instagram.jpg"
                     alt="">
-    
                 <!-- Texto de Instagram -->
                 <a href="https://www.instagram.com/paulino9699?r=nametag" target="_blank"
                     class="txt_codigo_instagram">
                     Instagram
                 </a>
             </div>
-    
             <!-- Código QR de WhatsApp -->
             <div class="caja_codigo_ws">
                 <img class="codigo-QR_ws_imagen formato_logos_75px" src="imagenes_1/Código QR de WhatsApp.jpg" alt="">
@@ -323,7 +279,6 @@
                     WhatsApp
                 </a>
             </div>
-
         </div>
 
                                      <!-- Información de Contactos -->
@@ -331,7 +286,7 @@
             <h1 class="titulo_columna3 formatos_titulos_35px">Información Contacto</h1>
             <!-- Dirección -->
             <div class="caja_direccion">
-                <img class="logo_direccion formato_logos_50px" src="imagenes_1/png logos/casa localizar.png" alt="">
+                <svg class="logo_direccion formato_logos_50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22s8.029-5.56 8-12c0-4.411-3.589-8-8-8S4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22zM8 9h3V6h2v3h3v2h-3v3h-2v-3H8V9z"></path></svg>
                 <h2 class="txt_direccion formato_textos_20px">
                     C/Resplado Doctor Betances N. 19 Ensanche Capotillo Distrito Nacional República Dominicana
                 </h2>
@@ -339,13 +294,13 @@
 
             <!-- Número Teléfonico -->
             <div class="caja_telefono">
-                <img class="logo_telefono formato_logos_50px" src="imagenes_1/png logos/telefono.png" alt="">
+                <svg class="logo_telefono formato_logos_50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"></path><path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"></path></svg>
                 <h2 class="txt_telefono formato_textos_20px">+1 849-846-9674</h2>
             </div>
 
             <!-- Información de Email -->
             <div class="caja_gmail">
-                <img class="logo_gmail formato_logos_50px" src="imagenes_1/png logos/Gmail.png" alt="">
+                <svg class="logo_gmail formato_logos_50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path></svg>
                 <h2 class="txt_gmail formato_textos_20px">
                     dapa7928@gmail.com
                     dapa8099@gnail.com
@@ -353,7 +308,7 @@
             </div>
             </div>
             <div class="copyright">
-                <img class="logo_copyright formato_logos_25px" src="imagenes_1/png logos/copyright.png" alt="">
+                <svg class="logo_copyright formato_logos_25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm0-18c4.337 0 8 3.663 8 8s-3.663 8-8 8-8-3.663-8-8 3.663-8 8-8z"></path><path d="M12 17c.901 0 2.581-.168 3.707-1.292l-1.414-1.416C13.85 14.735 12.992 15 12 15c-1.626 0-3-1.374-3-3s1.374-3 3-3c.993 0 1.851.265 2.293.707l1.414-1.414C14.582 7.168 12.901 7 12 7c-2.757 0-5 2.243-5 5s2.243 5 5 5z"></path></svg>
                 <h3 id="piePagina" class="txt_copyright">Todos los Derechos Reservados (2021)</h3>
             </div>
         </footer>

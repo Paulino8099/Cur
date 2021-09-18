@@ -732,7 +732,7 @@ $logoTeal: #008080;
     grid-template-columns: repeat(8, auto);
     grid-template-rows: repeat(8, auto);
   }
-  .modo_noche {
+  .btn_modoMoche {
     display: flex;
     width: 70px;
     height: 25px;
@@ -792,7 +792,7 @@ $logoTeal: #008080;
     justify-self: center;
     border-radius: 2px;
   }
-  .modo_noche:hover .dark_mode_flotante {
+  .btn_modoMoche:hover .dark_mode_flotante {
     /* esto es para al hacer estado hover en la barra de modo_noche poder presentarse el elemento */
     opacity: 1;
     margin-top: -72px;
