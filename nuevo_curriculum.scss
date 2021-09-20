@@ -30,6 +30,8 @@ $text_Gris_fullOscuro: #222222;
 $bg_blanco: #fff;
 $bg_negro: #000;
 $bg_teal: #008080;
+$bg_teal50: #0080807e;
+$bg_teal25: #00808023;
 $bg_gris_claro: #cacaca;
 $bg_gris_medioClaro: #9e9e9e;
 $bg_gris_medioOscuro: #505050;
@@ -50,9 +52,8 @@ $sombra_blanca: #fff;
 $sombra_negra: rgba(0, 0, 0, 0.5);
 $sombra_blanca50: rgba(255, 255, 255, 0.5);
 $sombra_negra50: rgba(0, 0, 0, 0.5);
-$sombra_blanca25: rgba(255, 255, 255, 0.250);
-$sombra_negra25: rgba(0, 0, 0, 0.250);
-
+$sombra_blanca25: rgba(255, 255, 255, 0.25);
+$sombra_negra25: rgba(0, 0, 0, 0.25);
 
 // Colores para los Bordes
 $borde_blanco: #fff;
@@ -72,12 +73,18 @@ $logo_gris_medioClaro: #9e9e9e;
 $logo_gris_medioOscuro: #505050;
 $logo_gris_fullOscuro: #222222;
 
+body::-webkit-scrollbar {
+  background-color: #0d8df2;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #008080;
+}
 body {
   position: relative;
   display: grid;
   transition: all 0.5s;
   grid-template-columns: repeat(10, auto);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(20, auto);
   &.darkMode {
     background-color: $bg_gris_fullOscuro;
     color: $text_blanco;
@@ -89,7 +96,7 @@ body {
     background-image: url(imagenes_1/Verdes-suaves-600x292.png);
     background-repeat: no-repeat;
     background-size: cover;
-  
+
     display: grid;
     grid-column: 1/11;
     grid-row: 1/2;
@@ -110,7 +117,7 @@ body {
       border: 2px solid $borde_teal;
       border-radius: 20px;
       font-size: 2rem;
-  
+
       grid-column: 2/4;
       grid-row: 2/3;
       &.darkMode {
@@ -197,12 +204,12 @@ body {
       grid-column: -1/-11;
       grid-row: 7/8;
       &.darkMode {
-        color: $bg_gris_claro;
+        color: $text_Gris_claro;
       }
     }
-  
+
     .txt_imagen {
-      align-self: start; 
+      align-self: start;
       justify-self: center;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       text-align: center;
@@ -211,10 +218,10 @@ body {
       grid-column: -1/-11;
       grid-row: 8/9;
       &.darkMode {
-        color: $bg_gris_claro;
+        color: $text_Gris_medioClaro
       }
     }
-    // IMAGEN DEL NAVEGADOR PRINCIPAL 
+    // IMAGEN DEL NAVEGADOR PRINCIPAL
     .imagen_navegador {
       justify-self: center;
       border-radius: 50%;
@@ -233,7 +240,7 @@ body {
       box-shadow: 0 0 10px $sombra_negra;
       transition: all 0.5s;
       background-color: #000;
-  
+
       display: none;
       grid-column: 1/9;
       grid-row: 1/9;
@@ -247,7 +254,7 @@ body {
         transition: all 0.5s ease;
         border-radius: 20px;
         box-shadow: 0 0 10px $sombra_negra;
-  
+
         grid-column: 1/9;
         grid-row: 1/9;
       }
@@ -262,7 +269,7 @@ body {
         justify-self: end;
         z-index: 3;
         cursor: pointer;
-  
+
         grid-column: -9/-1;
         grid-row: 1/2;
       }
@@ -281,7 +288,7 @@ body {
         line-height: 50px;
         width: 92%;
         height: 92%;
-  
+
         grid-column: 1/9;
         grid-row: 1/9;
         &.darkMode {
@@ -300,15 +307,30 @@ body {
   .contenedor_img_menu_nav {
     display: none;
   }
-  
+
   /* CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    CAJON DE ESTUDIOS    */
   .titulo_caja_Estudios {
+    display: flex;
+    align-items: center;
+    
     grid-column: 1/11;
     grid-row: 2/3;
     &.darkMode {
       background-color: $bg_gris_fullOscuro;
-      color: $text_Gris_claro;
       box-shadow: 0 -10px 10px $sombra_blanca25;
+    }
+    .txt_titulo_caja_estudios {
+      font-size: 2rem;
+      &.darkMode {
+        color: $logo_gris_claro
+      }
+    }
+    .svg_titulo_caja_estudios {
+      margin-left: 5px;
+      fill: $logo_teal;
+      &.darkMode {
+        fill: $logo_gris_claro
+      }
     }
   }
   .caja_estudios {
@@ -334,11 +356,11 @@ body {
     /* CAJA DE INFOTEP */
     .caja_infotep {
       position: relative;
-  
+
       display: grid;
       grid-template-columns: repeat(10, auto);
       grid-template-rows: repeat(10, auto);
-  
+
       .titulo_infotep {
         background: $bg_teal;
         border-top: 3px solid $borde_negro;
@@ -349,7 +371,7 @@ body {
         border-top-right-radius: 15px;
         justify-self: center;
         padding: 5px 20px;
-  
+
         display: flex;
         grid-column: 1/11;
         grid-row: 1/2;
@@ -363,7 +385,8 @@ body {
           font-size: 1.5rem;
           color: $text_blanco;
           align-self: center;
-          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
           &.darkMode {
             color: $text_blanco;
           }
@@ -372,24 +395,22 @@ body {
           margin-left: 5px;
         }
       }
-  
+      // CONTENIDO DE INFOTEP
       .caja_contenido_infotep {
-        border: 3px solid $borde_negro;
+        border: 2px solid $borde_gris_claro;
+        background-color: $bg_tealOpacity25;
         border-radius: 20px;
         justify-self: center;
-  
+
         display: grid;
         grid-column: 1/11;
         grid-row: 2/3;
         grid-template-columns: repeat(10, auto);
         grid-template-rows: repeat(10, auto);
-        &.darkMode {
-          border: 3px solid $borde_gris_claro;
-        }
         /* Primera caja (Infotep) */
         .caja_dpw {
           margin-bottom: 15px;
-  
+
           grid-column: 1/11;
           grid-row: 2/3;
           .dpw_titulo {
@@ -399,7 +420,7 @@ body {
           }
           .linea_dpw {
             align-self: flex-start;
-  
+
             grid-column: 1/11;
             grid-row: 2/3;
           }
@@ -410,7 +431,7 @@ body {
         /* segunda caja */
         .microsoft_oficce {
           margin-bottom: 10px;
-  
+
           grid-column: 1/11;
           grid-row: 3/4;
           .mpoi_titulo {
@@ -420,7 +441,7 @@ body {
           }
           .linea_mpoi {
             align-self: flex-start;
-  
+
             grid-column: 1/11;
             grid-row: 3/4;
           }
@@ -439,13 +460,13 @@ body {
             margin: 5px auto;
           }
         }
-  
+
         /* Tercera Caja */
         .contenedor {
           margin-bottom: 10px;
           display: flex;
           justify-content: space-between;
-  
+
           grid-column: 1/11;
           grid-row: 4/5;
           .window_nt {
@@ -478,7 +499,7 @@ body {
         .infotep_btn {
           justify-self: center;
           cursor: pointer;
-  
+
           grid-column: 1/11;
           grid-row: 10/11;
         }
@@ -495,7 +516,7 @@ body {
       margin-left: -1000px;
       z-index: 2;
       visibility: hidden;
-  
+
       display: grid;
       grid-template-columns: repeat(2, auto);
       grid-template-rows: repeat(auto);
@@ -503,7 +524,11 @@ body {
         margin-left: 0;
         visibility: visible;
       }
-  
+      &.darkMode {
+        background: $bg_gris_fullOscuro;
+        box-shadow: 0 0 10px $sombra_blanca50;
+      }
+
       .titulo_ventanaFlotante_infotep {
         color: $text_blanco;
         width: 100%;
@@ -513,7 +538,7 @@ body {
         text-align: center;
         justify-self: center;
         background: #008080;
-  
+
         display: grid;
         grid-column: 1/3;
         grid-row: 1/2;
@@ -527,13 +552,13 @@ body {
         justify-self: center;
         padding: 25px;
         gap: 10px;
-  
+
         display: grid;
         grid-column: 1/3;
         grid-row: 2/3;
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
         grid-auto-rows: minmax(200px, auto);
-  
+
         .caja_diseñadorPaginasWeb {
           background: #e5e7e9;
           padding: 10px;
@@ -578,6 +603,12 @@ body {
           text-shadow: 0 0 2px #000;
         }
       }
+      .contenedor_ventanaFlotante_infotep::-webkit-scrollbar {
+        background-color: #0d8df2;
+      }
+      .contenedor_ventanaFlotante_infotep::-webkit-scrollbar-thumb {
+        background-color: #31cf5d;
+      }
       /* Botón para Salir de Ventana Flotante del Infotep */
       .btn_salir_ventanaFlotante_infotep {
         position: absolute;
@@ -592,10 +623,10 @@ body {
         text-transform: capitalize;
         cursor: pointer;
         outline: none;
-  
+
         grid-column: 1/3;
       }
-  
+
       .btn_salir_ventanaFlotante_infotep:hover {
         color: $text_blanco;
         background: #008080;
@@ -616,7 +647,7 @@ body {
         border-top-right-radius: 15px;
         justify-self: center;
         padding: 5px 20px;
-  
+
         display: flex;
         grid-column: 1/2;
         grid-row: 1/2;
@@ -627,7 +658,8 @@ body {
           border-right: 2px solid $borde_gris_claro;
         }
         .txt_tituloPrincipal_estudiosMedios {
-          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
           font-size: 1.5rem;
           color: $text_blanco;
         }
@@ -639,39 +671,39 @@ body {
           }
         }
       }
+      // CONTENIDO DE ESTUDIOS MEDIOS
       .contenido_estudiosMedios {
-        border: 3px solid $borde_negro;
         border-radius: 20px;
         padding: 0 5px;
         background-color: #3581b1;
         justify-self: center;
-        border: 3px solid $borde_gris_claro;
+        border: 2px solid $borde_gris_claro;
         display: grid;
         grid-column: 1/2;
         grid-row: 2/3;
         grid-template-columns: repeat(8, auto);
         grid-template-rows: repeat(8, auto);
-  
+
         .titulo_conclusionEstudiosMedios {
           color: $text_blanco;
           text-shadow: 0 0 2px $sombra_negra;
           padding: 10px 0;
           font-size: 1.25rem;
           justify-self: center;
-  
+
           grid-column: 1/9;
           grid-row: 1/2;
         }
         .img_escuela {
           border-radius: 5px;
-  
+
           grid-column: 1/9;
           grid-row: 2/3;
         }
         .btn_estudiosMedios {
           justify-self: center;
           margin: 10px 0 0 0;
-  
+
           grid-column: 1/9;
           grid-row: 8/9;
         }
@@ -685,10 +717,10 @@ body {
       overflow: hidden;
       z-index: 2;
       border-radius: 20px;
-  
+
       box-shadow: $sombra_negra;
       border: 2px solid $borde_negro;
-  
+
       display: none;
       grid-column: 1/11;
       grid-template-columns: repeat(1, auto);
@@ -696,36 +728,36 @@ body {
       &.active {
         display: grid;
       }
-  
+
       .titulo_ventanaFlotante_estudiosMedios {
         background-color: $bg_teal;
         font-size: 1.5rem;
         width: 100%;
         color: $text_blanco;
         text-align: center;
-  
+
         grid-column: 1/2;
         grid-row: 1/2;
       }
-  
+
       .contenedor_ventanaFlotante_estudiosMedios {
         gap: 10px;
         padding: 10px 0;
         justify-content: space-between;
-  
+
         display: grid;
         grid-column: 1/2;
         grid-row: 2/3;
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
         grid-auto-rows: minmax(200px, auto);
-  
+
         .caja_certificadoBachiller {
           border-radius: 15px;
           padding: 10px;
           display: grid;
           max-width: 250px;
           background-color: #e5e7e9;
-  
+
           .titulo_certificadoBachiller {
             text-align: center;
             color: $text_teal;
@@ -747,7 +779,7 @@ body {
         font-size: 1.25rem;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         background-color: $bg_tealOpacity25;
-  
+
         grid-column: 1/2;
         grid-row: 2/3;
       }
@@ -756,16 +788,209 @@ body {
       }
     }
   }
-  /* CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   */
-  .titulo_contactos {
+  // CAJON DE EXPERIENCIAS   CAJON DE EXPERIENCIAS   CAJON DE EXPERIENCIAS   CAJON DE EXPERIENCIAS
+  .tituloPrincipal_experiencias {
+    justify-self: center;
+    align-items: center;
+
+    display: flex;
     grid-column: 1/11;
     grid-row: 4/5;
     &.darkMode {
       background-color: $bg_gris_fullOscuro;
       box-shadow: 0 -10px 10px $sombra_blanca25;
-      color: $text_Gris_claro;
+    }
+    .txt_tituloPrincipal_experiencas {
+      font-size: 2rem;
+      &.darkMode {
+        color: $text_Gris_claro;
+        
+      }
+    }
+    .svg_tituloPrincipal_experiencias {
+      fill: $logo_teal;
+      &.darkMode {
+        fill: $logo_gris_claro;
+      }
     }
   }
+  .cajon_experiencias {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    width: 90%;
+    justify-self: center;
+    box-shadow: 0 0 10px $sombra_negra50;
+    gap: 10px;
+
+    display: grid;
+    grid-column: 1/11;
+    grid-row: 5/6;
+    grid-template-columns: repeat(auto-fit, minmax(10px, auto));
+    grid-template-rows: repeat(minmax(10px, auto));
+    &.darkMode {
+      box-shadow: 0 0 10px $sombra_blanca50;
+    }
+    // CAJA DE FERRETERIA
+    .caja_ferreteria {
+      background: linear-gradient(to right, #33ccff 0%, #669999 100%);
+      border: 2px solid $borde_gris_medioClaro;
+      border-radius: 25px;
+      padding: 10px;
+      align-self: center;
+
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(5, auto);
+      &.darkMode {
+        border: 2px solid $borde_gris_claro;
+      }
+      .titulo_ferreteria {
+        font-size: 2rem;
+        font-family: 'Gluten', cursive;
+        justify-self: center;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        color: $text_blanco;
+        &.darkMode {
+          color: $text_Gris_claro;
+        }
+      }
+      .linea_ferreteria {
+        color: $text_blanco;
+        width: 80%;
+        justify-self: center;
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+      .img_ferreteria {
+        justify-self: center;
+        align-self: center;
+        width: 80%;
+        height: 70%;
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+      .parrafo_ferreteria {
+        color: $text_blanco;
+        // line-height: 2rem;
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+    }
+    // CAJA DE SERVICIO AL CLIENTE
+    .caja_servicioCliente {
+      border: 2px solid $borde_gris_medioOscuro;
+      border-radius: 25px;
+      padding: 10px;
+      align-self: center;
+      background: linear-gradient(to right, #606060 50%, rgba(115, 20, 231, 0.856) 100%);
+
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(5, auto);
+
+      .titulo_servicioCliente {
+        font-family: 'Gluten', cursive;
+        font-size: 2rem;
+        justify-self: center;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        color: $text_blanco;
+      }
+      .linea_servicioCliente {
+        justify-self: center;
+        width: 90%;
+        height: 1px;
+        color: $text_blanco;
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+      .img_servicioCliente {
+        justify-self: center;
+        align-self: center;
+        width: 90%;
+        height: 80%;
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+      .parrafo_servicioCliente {
+        color: $text_blanco;
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+    }
+    //CAJA DE MARKETING 
+    .caja_marketing {
+      border: 2px solid $borde_gris_medioClaro;
+      border-radius: 25px;
+      align-self: center;
+      padding: 10px;
+      background: linear-gradient(to right, #0808 0%, #b3a2a2 100%);
+
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(5, auto);
+      .titulo_marketing {
+        font-family: 'Gluten', cursive;
+        font-size: 2rem;
+        justify-self: center;
+        color: $text_blanco;
+        
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+      .linea_marketing {
+        width: 90%;
+        justify-self: center;
+        color: $text_blanco;
+
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+      .img_marketing {
+        justify-self: center;
+        align-self: center;
+        width: 90%;
+        height: 80%;
+
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+      .parrafo_marketing {
+        color: $text_blanco;
+
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+    }
+  }
+  .tituloPrincipal_contactos {
+    align-items: center;
+    grid-column: 1/11;
+    grid-row: 19/20;
+    display: flex;
+    &.darkMode {
+      background-color: $bg_gris_fullOscuro;
+      box-shadow: 0 -10px 10px $sombra_blanca25;
+      color: $text_Gris_claro;
+    }
+    .txt_tituloPrincipal_contactos {
+      font-size: 2rem;
+      color: $text_teal;
+      &.darkMode {
+        color: $text_Gris_claro;
+      }
+    }
+    .svg_tituloPrincipal_contactos {
+      margin-left: 5px;
+      fill: $logo_teal;
+      &.darkMode {
+        fill: $logo_gris_claro;
+      }
+    }
+  }
+      /* CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   CAJON DE CONTACTOS   */
   .caja_contactos {
     box-shadow: 0px 0px 10px $sombra_negra;
     background: $bg_blanco;
@@ -774,10 +999,12 @@ body {
     color: $text_Negro;
     border-radius: 20px;
     grid-column: 1/11;
-    grid-row: 5/6;
-  
+    grid-row: 20/21;
+
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px 1fr);
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(
+        200px 1fr
+      );
     grid-template-rows: minmax(300px, auto);
     justify-content: space-evenly;
     &.darkMode {
@@ -958,7 +1185,7 @@ body {
         grid-column: 1/11;
         grid-row: 1/2;
         &.darkMode {
-          color: $text_Gris_claro
+          color: $text_Gris_claro;
         }
       }
       /* Dirección */
@@ -972,6 +1199,9 @@ body {
         grid-column: 1/11;
         grid-row: 2/4;
         margin-bottom: 10px;
+        &.darkMode {
+          box-shadow: 0px 5px 1px $sombra_blanca25;
+        }
         .logo_direccion {
           grid-column: 1/2;
           grid-row: 1/2;
@@ -984,7 +1214,7 @@ body {
           grid-column: 2/10;
           grid-row: 1/2;
           &.darkMode {
-            color: $text_Gris_claro
+            color: $text_Gris_claro;
           }
         }
       }
@@ -999,6 +1229,9 @@ body {
         align-items: center;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: minmax(1fr, auto);
+        &.darkMode {
+          box-shadow: 0px 5px 1px $sombra_blanca25;
+        }
         .logo_telefono {
           grid-column: 1/2;
           grid-row: 1/2;
@@ -1011,7 +1244,7 @@ body {
           grid-row: 1/2;
           margin-left: 10px;
           &.darkMode {
-            color: $text_Gris_claro
+            color: $text_Gris_claro;
           }
         }
       }
@@ -1025,6 +1258,9 @@ body {
         grid-template-rows: minmax(1fr, auto);
         grid-column: 1/11;
         grid-row: 6/11;
+        &.darkMode {
+          box-shadow: 0px 5px 1px $sombra_blanca25;
+        }
         .logo_gmail {
           grid-column: 1/2;
           grid-row: 1/2;
@@ -1037,7 +1273,7 @@ body {
           grid-column: 2/10;
           grid-row: 1/2;
           &.darkMode {
-            color: $text_Gris_claro
+            color: $text_Gris_claro;
           }
         }
       }
@@ -1056,14 +1292,14 @@ body {
         }
       }
       .txt_copyright {
-        text-decoration: underline 1px solid #000;
+        text-decoration: underline 1px solid $text_Negro;
         &.darkMode {
-          color: $text_Gris_claro
+          color: $text_Gris_claro;
+          text-decoration: underline 1px solid $text_Gris_claro;
         }
       }
     }
   }
-  
 }
 
 /* Todos los Formatos   Todos los Formatos   Todos los Formatos   Todos los Formatos   Todos los Formatos   Todos los Formatos   */
@@ -1222,14 +1458,14 @@ body {
   padding: 5px 15px;
   margin-top: 20px;
   color: $text_teal;
-  box-shadow: 0px -10px 10px $sombra_negra;
+  box-shadow: 0px -10px 10px $sombra_negra25;
   z-index: 1;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   &.darkMode {
     color: $text_Gris_claro;
     background-color: $bg_gris_fullOscuro;
-    box-shadow: 0 -10 10px $sombra_blanca;
+    box-shadow: 0 -10 10px $sombra_negra50;
   }
 }
 .formatos_titulos_35px {

@@ -82,9 +82,9 @@
 }
 
 .btn_modoMoche .caja_flotante_darkMode.darkMode {
-  color: #222222;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  color: #cacaca;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .btn_modoMoche .caja_flotante_darkMode::after {
