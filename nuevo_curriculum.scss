@@ -73,12 +73,6 @@ $logo_gris_medioClaro: #9e9e9e;
 $logo_gris_medioOscuro: #505050;
 $logo_gris_fullOscuro: #222222;
 
-body::-webkit-scrollbar {
-  background-color: #0d8df2;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #008080;
-}
 body {
   position: relative;
   display: grid;
@@ -787,7 +781,7 @@ body {
         background-color: #008080;
       }
     }
-  }
+  } //hola
   // CAJON DE EXPERIENCIAS   CAJON DE EXPERIENCIAS   CAJON DE EXPERIENCIAS   CAJON DE EXPERIENCIAS
   .tituloPrincipal_experiencias {
     justify-self: center;
