@@ -1,4 +1,5 @@
 // Todas las Variables
+<<<<<<< Updated upstream
 var boton_modo_noche = document.getElementById("modo_noche");
 
 var body = document.getElementById("body"); //
@@ -30,14 +31,38 @@ modo_noche.addEventListener("click", function() {
   cajon_contactos.classList.toggle("dark_mode_sombra"); //Cajón de los Contactos
   titulo_contactos.classList.toggle("dark_mode_sombraEspecial"); //Titulo de los Contactos
 });
+=======
+
+var body = document.getElementById('body'); //
+var caja_estudios = document.getElementById('caja_estudios'); //Cajón de Estudios
+// var imagen_navegador_fondo = 
+var cajon_contactos = document.getElementById('contactos'); //Cajón de los Contactos
+var titulo_contactos = document.getElementById('titulo_contactos'); //Titulo de Estudios
+var txt_facebook = document.getElementById('txt_facebook'); 
+var caja_infotep = document.getElementById('caja_infotep'); //CAJA DE INFOTEP
+var caja_estudiosMedios = document.getElementById('caja_estudiosMedios'); //CAJA DE ESTUDIOS MEDIOS
+var txt_whatsapp = document.getElementById('txt_whatsapp'); //
+var txt_twitter = document.getElementById('txt_twitter');
+var txt_instagram = document.getElementById('txt_instagram');
+var btn_salir_ventanaFlotante_infotep = document.getElementById('btn_salir_ventanaFlotante_infotep') //Botón Salir de Ventana Flotante de Infotep
+var btn_3puntos = document.getElementById('btn_3puntos'); //Botón de 3 Puntos Dispositivos Móviles
+var menu_navegador = document.getElementById('menu_navegador'); //Menú del Navegador
+
+>>>>>>> Stashed changes
 
 btn_3puntos.addEventListener("click", function() {
   menu_navegador.classList.toggle("menu_navegador_active"); //Menú del Navegador
 });
 
+<<<<<<< Updated upstream
 // Activar la imagen del navegador en grande
 document.getElementById("imagen_navegador").addEventListener("click", function() {
   document.getElementById("contenedor_img_nav_float").classList.toggle("contenedor_img_nav_float_active");
+=======
+// ACTIVAR LA IMAGEN EN GRANDE DEL NAVEGADOR
+document.getElementById('caja_imagen_navegador').addEventListener('click', function() {
+  document.getElementById('contenedor_img_nav_float').classList.toggle('active');
+>>>>>>> Stashed changes
 });
 // Desactivar la imagen del navegador en grande
 document.getElementById("btn_img_nav_float").addEventListener("click", function() {
